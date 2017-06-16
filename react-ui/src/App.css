@@ -1,0 +1,194 @@
+
+
+.App {
+    text-align: center;
+    /*background: url(/emptybackgroundwrong.png);*/
+    background-size: contain;
+    width: 100%;
+    height: inherit;
+    /* Rectangle 5 */
+    background: linear-gradient(180deg, #2f2f2f 0%, #1A1A1A 100%);
+    opacity: 1.00;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+html, #root, .App {
+    display: inline;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #2f2f2f 0%, #1A1A1A 100%);
+}
+
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+.home-logodiv {
+    width: 100%;
+    /* top: 100px; */
+    position: absolute;
+    padding-top: 100px;
+    z-index: 12;
+}
+
+.home-logo {
+    height: 75px;
+    width: auto;
+    margin: auto;
+    z-index: 12;
+}
+
+.home-subscribe-text {
+    color: white;
+    position: relative;
+    top: 200px;
+    z-index: 12;
+}
+
+.home-subscribe-input {
+    background: #FFFFFF;
+    opacity: 1.00;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 24px;
+    z-index: 12;
+
+}
+
+.home-submit {
+    background: -webkit-linear-gradient(333.64deg, #FF0000 8.79%, #B60000 90.12%);
+    background: -o-linear-gradient(333.64deg, #FF0000 8.79%, #B60000 90.12%);
+    background: linear-gradient(116.36deg, #FF0000 8.79%, #B60000 90.12%);
+    font-size: 24px;
+    font-family: 'Share Tech Mono';
+    border: none;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 12;
+}
+
+.home-svgdiv {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-options {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 12;
+    overflow: hidden;
+    position: relative;
+    margin-top: 218px;
+}
+
+.option-1 {
+    height: 200px;
+    width: 200px;
+    border: 15px solid #F9FF70;
+    background: white;
+    margin: 15px;
+}
+
+.option-4 {
+    height: 200px;
+    width: 200px;
+    border: 15px solid #7C10E1;
+    background: white;
+    margin: 15px;
+}
+
+.option-3 {
+    height: 200px;
+    width: 200px;
+    border: 15px solid #ABFE59;
+    background: white;
+    margin: 15px;
+}
+
+.option-2 {
+    height: 200px;
+    width: 200px;
+    border: 15px solid #2E8CE6;
+    background: white;
+    margin: 15px;
+}
+
+.home-nav {
+    color: white;
+    font-size: 20px;
+    z-index: 12;
+}
+
+.verticalline {
+    -webkit-animation: offset 4s linear infinite;
+    -moz-animation: offset 4s linear infinite;
+    animation: offset 5s ease-in-out infinite;
+    stroke: #2a2a2a;
+    stroke-width: 3px;
+    stroke-dashoffset: 213;
+    stroke-dasharray: 54;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes offset {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        top: 101%;
+    }
+    100% {
+        top: -101%;
+    }
+}
+
+@-moz-keyframes slide {
+    0% {
+        top: 101%;
+    }
+    100% {
+        top: -101%;
+    }
+}
+
+@keyframes slide {
+    0% {
+        top: 101%;
+    }
+    100% {
+        top: -101%;
+    }
+}
