@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import '../App.css';
+// import logo from './remiixlogo.png';
 // import reality from './reality.png'
 // import concepts from './concepts.png'
 // import tunez from './tunez.png'
@@ -10,16 +11,16 @@ import '../App.css';
 import {Link, Route} from 'react-router-dom'
 
 
-class Tunez extends Component {
+class Concepts extends Component {
 
     render() {
 
         return (
-            <div className="Tunez">
-                Tunez
+            <div className="Concepts">
+                Concepts
             </div>
         );
     }
 }
 
-export default Tunez;
+export default Concepts;
