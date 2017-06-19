@@ -1,7 +1,7 @@
 /**
  * Created by theon on 6/6/2017.
  */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import '../App.css';
 // import logo from './remiixlogo.png';
 // import reality from './reality.png'
@@ -9,6 +9,7 @@ import '../App.css';
 // import tunez from './tunez.png'
 // import wrdz from './wrdz.png'
 import {Link, Route} from 'react-router-dom'
+import Overlay from '../Overlay.js';
 
 
 class Concepts extends Component {
@@ -17,7 +18,13 @@ class Concepts extends Component {
 
         return (
             <div className="Concepts">
-                Concepts
+                <Overlay/>
+                <div className="Pagetitle">CONCEPTS</div>
+                <div className="Page-div">
+                    <div className="Concept-view"></div>
+                    <div className="Concept-title"></div>
+                    <div className="Concept-Inspiration"></div>
+                </div>
             </div>
         );
     }

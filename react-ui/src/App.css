@@ -343,6 +343,54 @@ html, #root, .App {
     float: left;
 }
 
+.Wrdz-artcontent {
+    margin: 20px;
+    text-align: left;
+
+}
+
+.Wrdz-title {
+    text-align: left;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Wrdz-view {
+    background: white;
+    border-radius: 10px;
+    min-height: 80%;
+    width: 60%;
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 75px;
+}
+
+.Wrdz-back {
+    position: absolute;
+    left: -120px;
+    top: 30%;
+}
+
+.Wrdz-next {
+    position: absolute;
+    right: -120px;
+    top: 30%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.arrow-text {
+    transform: inherit;
+}
+
+.Page-div {
+    margin-left: 130px;
+    min-height: 100%;
+    width: calc(100% - 130px);
+}
 
 
 @keyframes App-logo-spin {

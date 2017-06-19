@@ -8,6 +8,7 @@ import '../App.css';
 // import tunez from './tunez.png'
 // import wrdz from './wrdz.png'
 import {Link, Route} from 'react-router-dom'
+import Overlay from '../Overlay.js';
 
 
 class Tunez extends Component {
@@ -16,7 +17,8 @@ class Tunez extends Component {
 
         return (
             <div className="Tunez">
-                Tunez
+                <Overlay/>
+                <div className="Pagetitle">TUNEZ</div>
             </div>
         );
     }
