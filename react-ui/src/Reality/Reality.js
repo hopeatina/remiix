@@ -3,11 +3,15 @@
  */
 import React, {Component} from 'react';
 import '../App.css';
-import reality from '../Home/reality.png'
-import concepts from '../Home/concepts.png'
-import tunez from '../Home/tunez.png'
-import wrdz from '../Home/wrdz.png'
-import {Link, Route} from 'react-router-dom'
+import reality from '../Home/reality.png';
+import concepts from '../Home/concepts.png';
+import tunez from '../Home/tunez.png';
+import wrdz from '../Home/wrdz.png';
+import {Link, Route} from 'react-router-dom';
+import menuicon from '../Home/menuicon.png';
+import homeicon from '../Home/remixlogoblack.png';
+import leftarrow from '../Home/leftarrow.png'
+import rightarrow from '../Home/rightarrow.png'
 
 
 class Reality extends Component {
@@ -104,20 +108,47 @@ class Reality extends Component {
                         </defs>
                     </svg>
                 </div>
-                <div className="Sidebar">
-                    <div className="Sidebar-1">
-                        <Link to="/reality"><img className="Sidebar-img" src={reality} width="auto" height="90%"></img></Link>
-                    </div>
-                    <div className="Sidebar-2">
-                        <Link to="/wrdz"><img className="Sidebar-img" src={wrdz} width="auto" height="90%"></img></Link>
-                    </div>
-                    <div className="Sidebar-3">
-                        <Link to="/concepts"><img className="Sidebar-img" src={concepts} width="auto" height="90%"></img></Link>
-                    </div>
-                    <div className="Sidebar-4">
-                        <Link to="/tunez"><img className="Sidebar-img" src={tunez} width="auto" height="90%"></img></Link>
+                <div className="Sideoverlay">
+                    <div className="Menuicon">
+                        <img src={menuicon} height='50px'></img>
                     </div>
                 </div>
+                <div className="Homeicon">
+                    <img src={homeicon} height='50px'></img>
+                </div>
+                <div className="Pagetitle">REALITY</div>
+                <div className="Reality-view">
+                    <div className="Reality-control-left">
+                    </div>
+                    <div className="Reality-control-right"></div>
+                    <div className="Reality-carousel-div">
+                        <div className="Reality-arrow-left">
+                            <img src={leftarrow}></img>
+                        </div>
+                            <div className="Reality-viewitem"></div>
+                            <div className="Reality-viewitem"></div>
+                            <div className="Reality-viewitem"></div>
+                            <div className="Reality-viewitem"></div>
+                        <div className="Reality-arrow-right">
+                            <img src={leftarrow}></img>
+                        </div>
+                    </div>
+                </div>
+
+                {/*<div className="Sidebar">*/}
+                    {/*<div className="Sidebar-1">*/}
+                        {/*<Link to="/reality"><img className="Sidebar-img" src={reality} width="auto" height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                    {/*<div className="Sidebar-2">*/}
+                        {/*<Link to="/wrdz"><img className="Sidebar-img" src={wrdz} width="auto" height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                    {/*<div className="Sidebar-3">*/}
+                        {/*<Link to="/concepts"><img className="Sidebar-img" src={concepts} width="auto" height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                    {/*<div className="Sidebar-4">*/}
+                        {/*<Link to="/tunez"><img className="Sidebar-img" src={tunez} width="auto" height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
             </div>
         );
     }

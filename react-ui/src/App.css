@@ -221,15 +221,129 @@ html, #root, .App {
     padding: 5%;
 }
 
-.Reality {
+.Sideoverlay {
+    background: rgba(41, 41, 41, 0.5);
+    height: 100%;
+    width: 130px;
+    position: absolute;
+}
+
+.Homeicon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.Pagetitle {
+    position: relative;
+    top: 70px;
+    text-align: right;
+    right: 25px;
+}
+
+.Menuicon {
+    margin: auto;
+    padding-top: 30px;
+}
+
+.Reality, .Concepts, .Wrdz, .Tunez {
     text-align: center;
     background-size: contain;
     width: 100%;
     height: 100%;
     opacity: 1.00;
-    background: linear-gradient(121.64deg, #FBFF93 25.93%, #F8FF4E 99.25%);
     position: absolute;
+    overflow: hidden;
 }
+
+.Reality {
+    background: linear-gradient(121.64deg, #FBFF93 25.93%, #F8FF4E 99.25%);
+}
+.Concepts {
+    background: linear-gradient(112.64deg, #ABFE59 29.44%, #6DCD0F 97.87%);
+}
+.Tunez {
+    background: linear-gradient(55.77deg, #9B51E0 17.13%, #7D12E0 90.67%);
+}
+.Wrdz {
+    background: linear-gradient(121.64deg, #2F80ED 25.93%, #0052C0 99.25%);
+}
+
+.Reality-view {
+    position: absolute;
+    height: 51%;
+    width: 64%;
+    background: white;
+    margin-left: calc(130px + 10%);
+    margin-top: 55px;
+    background: rgba(251, 252, 229, 0.85);
+    border: 10px solid #D0D54E;
+    border-radius: 20px;
+
+}
+.Reality-control-left {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background: white;
+    top: 88%;
+    left: 10%;
+    border-radius: 100%;
+    border: 10px solid #D0D54E;
+}
+.Reality-control-right {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: white;
+    top: 88%;
+    float: right;
+    left: 74%;
+    border-radius: 100%;
+    border: 10px solid #D0D54E;
+}
+
+.Reality-carousel-div {
+    width: 100%;
+    height: 35%;
+    /* background: white; */
+    border-radius: 10px;
+    border: 1px #d0d54e solid;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 120%;
+    left: -10px;
+    background: rgba(251, 252, 229, 0.95);
+}
+
+.Reality-arrow-left {
+    position: absolute;
+    left: -108px;
+    top: -5%;
+    /*box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);*/
+}
+.Reality-arrow-right {
+    position: absolute;
+    right: -108px;
+    top: -5%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.Reality-viewitem {
+    height: 80%;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 180px;
+    background: rgba(208, 213, 78, 0.67);
+    border-radius: 10px;
+    float: left;
+}
+
+
 
 @keyframes App-logo-spin {
     from {
