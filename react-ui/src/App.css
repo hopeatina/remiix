@@ -14,7 +14,7 @@
 
 html, #root, .App {
     display: inline;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     background: linear-gradient(180deg, #2f2f2f 0%, #1A1A1A 100%);
 }
@@ -89,7 +89,7 @@ html, #root, .App {
     top: 0;
     width: 100%;
     position: absolute;
-    height: 100%;
+    min-height: 100%;
     overflow: hidden;
     z-index: 0;
 }
@@ -191,8 +191,10 @@ html, #root, .App {
 .Sidebar {
     width: 250px;
     height: 100%;
+    top: 0;
     max-width: 100%;
     position: absolute;
+    z-index: 12;
 }
 
 .Sidebar-1, .Sidebar-2,
@@ -226,6 +228,24 @@ html, #root, .App {
     height: 100%;
     width: 130px;
     position: absolute;
+}
+
+.Sidebar-close {
+    background: white;
+    height:100px;
+    width: 100px;
+    position: absolute;
+    float: right;
+    right: -50px;
+    top: 45%;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+.close-icon {
+    height: 50px;
+    padding: 24px;
 }
 
 .Homeicon {
@@ -279,7 +299,6 @@ html, #root, .App {
     background: rgba(251, 252, 229, 0.85);
     border: 10px solid #D0D54E;
     border-radius: 20px;
-
 }
 .Reality-control-left {
     position: relative;
@@ -392,6 +411,57 @@ html, #root, .App {
     width: calc(100% - 130px);
 }
 
+.Concepts-view {
+    height: 400px;
+    width: 400px;
+    background: rgba(0, 0, 0, 0.47);
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: white 10px solid;
+}
+
+.Concepts-title {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    height: 170px;
+    width: 370px;
+    /* margin-left: auto; */
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    margin-right: 50px;
+    flex: 1;
+    margin-top: 60px;
+}
+
+.Concepts-inspiration {
+    position: relative;
+    top: 5px;
+    height: 170px;
+    width: 370px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.Concepts-back {
+    position: relative;
+    left: -270px;
+    top: 30%;
+}
+
+.Concepts-next {
+    position: relative;
+    right: -130px;
+    float: right;
+    width: 112px;
+    top: -53px;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
 
 @keyframes App-logo-spin {
     from {

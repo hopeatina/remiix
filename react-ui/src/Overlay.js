@@ -10,6 +10,11 @@ import './App.css';
 import {Link, Route} from 'react-router-dom'
 import menuicon from './Home/menuicon.png';
 import homeicon from './Home/remixlogoblack.png';
+import reality from './Home/reality.png'
+import concepts from './Home/concepts.png'
+import tunez from './Home/tunez.png'
+import wrdz from './Home/wrdz.png'
+import close from './Home/close.png'
 
 
 class Overlay extends Component {
@@ -25,22 +30,28 @@ class Overlay extends Component {
                         <g id="Canvas" transform="translate(-1283 -2209)">
                             <g id="Group">
                                 <g id="Rectangle 8">
-                                    <use href="#path0_fill" transform="translate(1471.55 2215)" fill="#000000" opacity=".2"/>
+                                    <use href="#path0_fill" transform="translate(1471.55 2215)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
-                                    <use href="#path1_fill" transform="translate(1519.43 2217)" fill="#000000" opacity=".2"/>
+                                    <use href="#path1_fill" transform="translate(1519.43 2217)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
-                                    <use href="#path2_fill" transform="translate(1567.32 2209)" fill="#000000" opacity=".2"/>
+                                    <use href="#path2_fill" transform="translate(1567.32 2209)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
-                                    <use href="#path3_fill" transform="translate(2325.49 3303)" fill="#000000" opacity=".2"/>
+                                    <use href="#path3_fill" transform="translate(2325.49 3303)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
-                                    <use href="#path4_fill" transform="translate(2372.38 2754)" fill="#000000" opacity=".2"/>
+                                    <use href="#path4_fill" transform="translate(2372.38 2754)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
-                                    <use href="#path5_fill" transform="translate(2420.26 3303)" fill="#000000" opacity=".2"/>
+                                    <use href="#path5_fill" transform="translate(2420.26 3303)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path6_fill" transform="matrix(5.33596e-17 -1 1 7.02666e-17 1283 3329)"
@@ -48,7 +59,8 @@ class Overlay extends Component {
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path7_fill"
-                                         transform="matrix(5.33596e-17 -1 1 7.02666e-17 1283 3359.16)" fill="#000000" opacity=".2"/>
+                                         transform="matrix(5.33596e-17 -1 1 7.02666e-17 1283 3359.16)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path8_fill" transform="matrix(5.33596e-17 -1 1 7.02666e-17 1283 3389)"
@@ -56,19 +68,23 @@ class Overlay extends Component {
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path9_fill"
-                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2607.81 2559)" fill="#000000" opacity=".2"/>
+                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2607.81 2559)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path10_fill"
-                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2515.04 2585)" fill="#000000" opacity=".2"/>
+                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2515.04 2585)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path11_fill"
-                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2819.3 2611)" fill="#000000" opacity=".2"/>
+                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2819.3 2611)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path10_fill"
-                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2508.05 3467)" fill="#000000" opacity=".2"/>
+                                         transform="matrix(6.10854e-17 -1 1 6.13796e-17 2508.05 3467)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
                                     <use href="#path12_fill" transform="matrix(6.12323e-17 -1 1 6.12323e-17 2564 2986)"
@@ -83,7 +99,8 @@ class Overlay extends Component {
                                          fill="#000000" opacity=".2"/>
                                 </g>
                                 <g id="Rectangle 8">
-                                    <use href="#path1_fill" transform="translate(2655.7 2217)" fill="#000000" opacity=".2"/>
+                                    <use href="#path1_fill" transform="translate(2655.7 2217)" fill="#000000"
+                                         opacity=".2"/>
                                 </g>
                             </g>
                         </g>
@@ -107,13 +124,32 @@ class Overlay extends Component {
                     </svg>
                 </div>
                 <div className="Sideoverlay">
-                    <div className="Menuicon">
-                        <img src={menuicon} height='50px'></img>
-                    </div>
+                <div className="Menuicon">
+                <img src={menuicon} height='50px'></img>
+                </div>
                 </div>
                 <div className="Homeicon">
                     <img src={homeicon} height='50px'></img>
                 </div>
+                {/*<div className="Sidebar">*/}
+                    {/*<div className="Sidebar-close">*/}
+                        {/*<img className="close-icon" src={close}></img>*/}
+                    {/*</div>*/}
+                    {/*<div className="Sidebar-1">*/}
+                        {/*<Link to="/reality"><img className="Sidebar-img" src={reality} width="auto" height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                    {/*<div className="Sidebar-2">*/}
+                        {/*<Link to="/wrdz"><img className="Sidebar-img" src={wrdz} width="auto" height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                    {/*<div className="Sidebar-3">*/}
+                        {/*<Link to="/concepts"><img className="Sidebar-img" src={concepts} width="auto"*/}
+                                                  {/*height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                    {/*<div className="Sidebar-4">*/}
+                        {/*<Link to="/tunez"><img className="Sidebar-img" src={tunez} width="auto"*/}
+                                               {/*height="90%"></img></Link>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
             </div>
         );
     }

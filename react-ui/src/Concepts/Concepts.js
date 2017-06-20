@@ -10,6 +10,8 @@ import '../App.css';
 // import wrdz from './wrdz.png'
 import {Link, Route} from 'react-router-dom'
 import Overlay from '../Overlay.js';
+import arrow from '../Home/leftarrow.png'
+
 
 
 class Concepts extends Component {
@@ -21,9 +23,18 @@ class Concepts extends Component {
                 <Overlay/>
                 <div className="Pagetitle">CONCEPTS</div>
                 <div className="Page-div">
-                    <div className="Concept-view"></div>
-                    <div className="Concept-title"></div>
-                    <div className="Concept-Inspiration"></div>
+                    <div className="Concepts-view">
+                        <div className="Concepts-back">
+                            <img src={arrow}></img>
+                            <div >Previous</div>
+                        </div>
+                        <div className="Concepts-next">
+                            <img src={arrow}></img>
+                            <div className="arrow-text">Next</div>
+                        </div>
+                    </div>
+                    <div className="Concepts-title"></div>
+                    <div className="Concepts-inspiration"></div>
                 </div>
             </div>
         );

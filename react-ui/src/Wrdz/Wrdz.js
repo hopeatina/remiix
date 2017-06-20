@@ -26,9 +26,9 @@ class Wrdz extends Component {
                             <div>Previous</div>
                         </div>
 
-                        <div className="Wrdz-title">Article Title</div>
+                        <div className="Wrdz-title">Introducing Remiix.life</div>
                         <div className="Wrdz-artcontent">
-                            Content Goes Here
+                            This is the beginning.
                         </div>
                         <div className="Wrdz-next">
                             <img src={arrow}></img>
