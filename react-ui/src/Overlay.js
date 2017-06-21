@@ -18,8 +18,41 @@ import close from './Home/close.png'
 
 
 class Overlay extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {isNavOpen: true};
+
+        // This binding is necessary to make `this` work in the callback
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+            isNavOpen: !prevState.isNavOpen
+        }));
+    }
 
     render() {
+
+        const Sidebar = <div className="Sidebar">
+            <div onClick={this.handleClick} className="Sidebar-close">
+                <img className="close-icon" src={close}></img>
+            </div>
+            <div className="Sidebar-1">
+                <Link to="/reality"><img className="Sidebar-img" src={reality} width="auto" height="90%"></img></Link>
+            </div>
+            <div className="Sidebar-2">
+                <Link to="/wrdz"><img className="Sidebar-img" src={wrdz} width="auto" height="90%"></img></Link>
+            </div>
+            <div className="Sidebar-3">
+                <Link to="/concepts"><img className="Sidebar-img" src={concepts} width="auto"
+                                          height="90%"></img></Link>
+            </div>
+            <div className="Sidebar-4">
+                <Link to="/tunez"><img className="Sidebar-img" src={tunez} width="auto"
+                                       height="90%"></img></Link>
+            </div>
+        </div>;
 
         return (
             <div className="Overlay">
@@ -124,32 +157,15 @@ class Overlay extends Component {
                     </svg>
                 </div>
                 <div className="Sideoverlay">
-                <div className="Menuicon">
-                <img src={menuicon} height='50px'></img>
-                </div>
+                    <div onClick={this.handleClick} className="Menuicon">
+                        <img src={menuicon} height='50px'></img>
+                    </div>
                 </div>
                 <div className="Homeicon">
                     <img src={homeicon} height='50px'></img>
                 </div>
-                {/*<div className="Sidebar">*/}
-                    {/*<div className="Sidebar-close">*/}
-                        {/*<img className="close-icon" src={close}></img>*/}
-                    {/*</div>*/}
-                    {/*<div className="Sidebar-1">*/}
-                        {/*<Link to="/reality"><img className="Sidebar-img" src={reality} width="auto" height="90%"></img></Link>*/}
-                    {/*</div>*/}
-                    {/*<div className="Sidebar-2">*/}
-                        {/*<Link to="/wrdz"><img className="Sidebar-img" src={wrdz} width="auto" height="90%"></img></Link>*/}
-                    {/*</div>*/}
-                    {/*<div className="Sidebar-3">*/}
-                        {/*<Link to="/concepts"><img className="Sidebar-img" src={concepts} width="auto"*/}
-                                                  {/*height="90%"></img></Link>*/}
-                    {/*</div>*/}
-                    {/*<div className="Sidebar-4">*/}
-                        {/*<Link to="/tunez"><img className="Sidebar-img" src={tunez} width="auto"*/}
-                                               {/*height="90%"></img></Link>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
+                {this.state.isNavOpen ? null : Sidebar}
+
             </div>
         );
     }

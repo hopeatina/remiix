@@ -1,5 +1,4 @@
 
-
 .App {
     text-align: center;
     /*background: url(/emptybackgroundwrong.png);*/
@@ -18,7 +17,6 @@ html, #root, .App {
     width: 100%;
     background: linear-gradient(180deg, #2f2f2f 0%, #1A1A1A 100%);
 }
-
 
 .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -195,6 +193,10 @@ html, #root, .App {
     max-width: 100%;
     position: absolute;
     z-index: 12;
+    -webkit-animation: slide-right .7s cubic-bezier(0.18, 0.89, 0.32, 1.18) ;
+    -moz-animation: slide-right .7s cubic-bezier(0.18, 0.89, 0.32, 1.18) ;
+    animation: slide-right .7s cubic-bezier(0.18, 0.89, 0.32, 1.18);
+
 }
 
 .Sidebar-1, .Sidebar-2,
@@ -209,12 +211,15 @@ html, #root, .App {
 .Sidebar-1 {
     background: #FBFF93;
 }
+
 .Sidebar-2 {
     background: #2F80ED;
 }
+
 .Sidebar-3 {
     background: #ABFE59;
 }
+
 .Sidebar-4 {
     background: #9B51E0;
 }
@@ -232,17 +237,18 @@ html, #root, .App {
 
 .Sidebar-close {
     background: white;
-    height:100px;
+    height: 100px;
     width: 100px;
     position: absolute;
     float: right;
     right: -50px;
     top: 45%;
-    -webkit-border-radius:100%;
-    -moz-border-radius:100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
     border-radius: 100%;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
+
 .close-icon {
     height: 50px;
     padding: 24px;
@@ -279,19 +285,22 @@ html, #root, .App {
 .Reality {
     background: linear-gradient(121.64deg, #FBFF93 25.93%, #F8FF4E 99.25%);
 }
+
 .Concepts {
     background: linear-gradient(112.64deg, #ABFE59 29.44%, #6DCD0F 97.87%);
 }
+
 .Tunez {
     background: linear-gradient(55.77deg, #9B51E0 17.13%, #7D12E0 90.67%);
 }
+
 .Wrdz {
     background: linear-gradient(121.64deg, #2F80ED 25.93%, #0052C0 99.25%);
 }
 
 .Reality-view {
     position: absolute;
-    height: 51%;
+    height: 63%;
     width: 64%;
     background: white;
     margin-left: calc(130px + 10%);
@@ -300,38 +309,40 @@ html, #root, .App {
     border: 10px solid #D0D54E;
     border-radius: 20px;
 }
+
 .Reality-control-left {
     position: relative;
     height: 100px;
     width: 100px;
     background: white;
-    top: 88%;
+    top: 84%;
     left: 10%;
     border-radius: 100%;
     border: 10px solid #D0D54E;
 }
+
 .Reality-control-right {
     position: absolute;
     height: 100px;
     width: 100px;
     background: white;
-    top: 88%;
+    top: 84%;
     float: right;
-    left: 74%;
+    right: 10%;
     border-radius: 100%;
     border: 10px solid #D0D54E;
 }
 
 .Reality-carousel-div {
     width: 100%;
-    height: 35%;
+    height: 24%;
     /* background: white; */
     border-radius: 10px;
     border: 1px #d0d54e solid;
-    position: absolute;
+    position: relative;
     padding-left: 10px;
     padding-right: 10px;
-    top: 120%;
+    top: 85%;
     left: -10px;
     background: rgba(251, 252, 229, 0.95);
 }
@@ -342,6 +353,7 @@ html, #root, .App {
     top: -5%;
     /*box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);*/
 }
+
 .Reality-arrow-right {
     position: absolute;
     right: -108px;
@@ -354,7 +366,8 @@ html, #root, .App {
 
 .Reality-viewitem {
     height: 80%;
-    margin-top: 2%;
+    top: 10%;
+    position: relative;
     margin-left: 2%;
     width: 180px;
     background: rgba(208, 213, 78, 0.67);
@@ -482,11 +495,10 @@ html, #root, .App {
 .Tunez-item {
     width: 80%;
     height: 110px;
-    margin:auto;
+    margin: auto;
     background: #F8F8F8;
     border: 1px solid #545454;
     box-sizing: border-box;
-    z-index: 10;
     -webkit-transition: height .2s ease;
     -webkit-transition: width .2s ease;
     -moz-transition: height .2s ease;
@@ -500,14 +512,13 @@ html, #root, .App {
 }
 
 .Tunez-item:hover {
-    height:150px;
+    height: 150px;
     position: relative;
     background: white;
     margin-top: -20px;
     width: 90%;
     -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
-    z-index: 12;
 }
 
 .Tunez-cover {
@@ -538,10 +549,10 @@ html, #root, .App {
 
 .Tunez-playing {
 
-width: 60%;
+    width: 60%;
     height: 80%;
     position: absolute;
-    margin-left:45%;
+    margin-left: 45%;
 }
 
 .Tunez-songwave {
@@ -563,14 +574,14 @@ width: 60%;
 .Tunez-ctrlback {
     width: 114px;
     height: 114px;
-    -webkit-border-radius:100%;
-    -moz-border-radius:100%;
-    border-radius:100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
     background: #FFFFFF;
     border: 10px solid #4E1584;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: inline-block;
-    margin-left:10%;
+    margin-left: 10%;
     float: left;
 
 }
@@ -590,23 +601,24 @@ width: 60%;
 }
 
 .Tunez-play {
-    -webkit-border-radius:100%;
-    -moz-border-radius:100%;
-    border-radius:100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
     display: inline-block;
     width: 150px;
     height: 150px;
-    -webkit-border-radius:100%;
-    -moz-border-radius:100%;
-    border-radius:100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
     float: left;
     margin-top: 7%;
     background: #FFFFFF;
     border: 10px solid #4E1584;
 }
 
-.newstuff {
-
+.ctrlicon {
+    height: 60%;
+    margin-top: 20%;
 }
 
 @keyframes App-logo-spin {
@@ -648,5 +660,14 @@ width: 60%;
     }
     100% {
         top: -101%;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 0%;
     }
 }

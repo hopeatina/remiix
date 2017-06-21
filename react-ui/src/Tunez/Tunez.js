@@ -10,7 +10,9 @@ import '../App.css';
 import {Link, Route} from 'react-router-dom'
 import Overlay from '../Overlay.js';
 import SongItem from './SongItem.js'
-
+import back from '../Home/back.png'
+import play from '../Home/play.png'
+import next from '../Home/next.png'
 
 class Tunez extends Component {
 
@@ -32,9 +34,15 @@ class Tunez extends Component {
                     <div className="Tunez-playing">
                         <div className="Tunez-songwave">
                         </div>
-                        <div className="Tunez-ctrlback"></div>
-                        <div className="Tunez-play"></div>
-                        <div className="Tunez-ctrlnext"></div>
+                        <div className="Tunez-ctrlback">
+                            <img className="ctrlicon" src={back}></img>
+                        </div>
+                        <div className="Tunez-play">
+                            <img className="ctrlicon" src={play}></img>
+                        </div>
+                        <div className="Tunez-ctrlnext">
+                            <img className="ctrlicon" src={next}></img>
+                        </div>
 
                     </div>
                 </div>
