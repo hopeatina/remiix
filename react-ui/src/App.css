@@ -179,7 +179,7 @@ html, #root, .App {
 .verticalline {
     -webkit-animation: offset 4s linear infinite;
     -moz-animation: offset 4s linear infinite;
-    animation: offset 5s ease-in-out infinite;
+    animation: offset 4s ease-in-out infinite;
     stroke: rgba(0,0,0, .6);;
     stroke-width: 3px;
     stroke-dashoffset: 213;
