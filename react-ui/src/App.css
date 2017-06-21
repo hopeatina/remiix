@@ -89,7 +89,7 @@ html, #root, .App {
     top: 0;
     width: 100%;
     position: absolute;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
     z-index: 0;
 }
@@ -461,6 +461,133 @@ html, #root, .App {
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+.Tunez-list {
+    height: 80%;
+    width: 40%;
+    position: absolute;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.Tunez-category {
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+.Tunez-item {
+    width: 80%;
+    height: 110px;
+    margin:auto;
+    background: #F8F8F8;
+    border: 1px solid #545454;
+    box-sizing: border-box;
+    z-index: 10;
+    -webkit-transition: height .2s ease;
+    -webkit-transition: width .2s ease;
+    -moz-transition: height .2s ease;
+    -moz-transition: width .2s ease;
+    -ms-transition: height .2s ease;
+    -ms-transition: width .2s ease;
+    -o-transition: height .2s ease;
+    -o-transition: width .2s ease;
+    transition: height .2s ease;
+    transition: width .2s ease;
+}
+
+.Tunez-item:hover {
+    height:150px;
+    position: relative;
+    background: white;
+    margin-top: -20px;
+    width: 90%;
+    -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    z-index: 12;
+}
+
+.Tunez-cover {
+    position: relative;
+    background: rgba(135, 38, 225, 0.4);
+    top: 15%;
+    left: 10%;
+    height: 70%;
+    width: 20%;
+}
+
+.Tunez-title {
+    height: 20px;
+    margin-left: 0%;
+    margin-top: -12%;
+}
+
+.Tunez-date {
+    font-size: 12px;
+    margin-top: 6%;
+}
+
+.Tunez-length {
+    position: relative;
+    margin-top: -5%;
+    margin-left: 70%;
+}
+
+.Tunez-playing {
+
+width: 60%;
+    height: 80%;
+    position: absolute;
+    margin-left:55%;
+}
+
+.Tunez-songwave {
+    margin-top: 15%;
+    /* margin-right: -6%; */
+    margin-left: 15%;
+    /* text-align: center; */
+    height: 300px;
+    width: 300px;
+    /* margin: auto; */
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border: 20px solid rgba(68, 20, 112, 0.87);
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.Tunez-ctrlback {
+    width: 114px;
+    height: 114px;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+    background: #FFFFFF;
+    border: 10px solid #4E1584;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.Tunez-ctrlnext {
+    width: 114px;
+    display: inline-flex;
+    height: 114px;
+    margin-right: 57%;
+    background: #FFFFFF;
+    border: 10px solid #4E1584;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+}
+
+.Tunez-play {
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
 }
 
 @keyframes App-logo-spin {
