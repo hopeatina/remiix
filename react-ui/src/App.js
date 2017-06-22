@@ -22,8 +22,9 @@ class App extends Component {
                         <Route path={'/wrdz'} component={Wrdz}/>
                         <Route path={'/tunez'} component={Tunez}/>
                         <Route path={'/concepts'} component={Concepts}/>
+                        {/*<Route component={NotFound}/>*/}
                         <Route path={'/'} component={Home}/>
-                        <Route component={NotFound}/>
+
                     </Switch>
                 </div>
             </BrowserRouter>
