@@ -62,7 +62,7 @@ class Overlay extends Component {
                         <desc>Created using Figma</desc>
                         <g id="Canvas" transform="translate(-1283 -2209)">
                             <g id="Group">
-                                <g id="Rectangle 8" className="verticalline" >
+                                <g id="Rectangle 8" className="verticalline">
                                     <use href="#path0_fill" transform="translate(1471.55 2215)" fill="#000000"
                                          opacity=".2"/>
                                 </g>
@@ -161,9 +161,11 @@ class Overlay extends Component {
                         <img src={menuicon} height='50px'></img>
                     </div>
                 </div>
-                <div className="Homeicon">
-                    <img src={homeicon} height='50px'></img>
-                </div>
+                <Link to="/">
+                    <div className="Homeicon">
+                        <img src={homeicon} height='50px'></img>
+                    </div>
+                </Link>
                 {this.state.isNavOpen ? null : Sidebar}
 
             </div>

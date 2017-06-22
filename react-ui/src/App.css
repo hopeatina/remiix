@@ -100,6 +100,7 @@ html, #root, .App {
     overflow: hidden;
     position: relative;
     margin-top: 218px;
+    text-align: center;
 }
 
 .option-1:hover, .option-2:hover,
@@ -109,6 +110,7 @@ html, #root, .App {
 }
 
 .option-1 {
+    display: inline-block;
     height: 200px;
     width: 200px;
     border: 15px solid #F9FF70;
@@ -117,6 +119,7 @@ html, #root, .App {
 }
 
 .option-4 {
+    display: inline-block;
     height: 200px;
     width: 200px;
     border: 15px solid #7C10E1;
@@ -125,6 +128,7 @@ html, #root, .App {
 }
 
 .option-3 {
+    display: inline-block;
     height: 200px;
     width: 200px;
     border: 15px solid #ABFE59;
@@ -133,11 +137,18 @@ html, #root, .App {
 }
 
 .option-2 {
+    display: inline-block;
     height: 200px;
     width: 200px;
     border: 15px solid #2E8CE6;
     background: white;
     margin: 15px;
+}
+
+.home-img {
+    height: 90%;
+    margin: 5%;
+    max-width: 90%;
 }
 
 .home-nav {
@@ -224,6 +235,19 @@ html, #root, .App {
     background: #9B51E0;
 }
 
+.Sidebar-1:hover {
+    background: #b2b660;
+}
+.Sidebar-2:hover {
+    background: #2c5ab5;
+}
+.Sidebar-3:hover {
+    background: #7ab642;
+}
+.Sidebar-4:hover {
+    background: #7a47b6;
+}
+
 .Sidebar-img {
     padding: 5%;
 }
@@ -249,6 +273,10 @@ html, #root, .App {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
 
+.Sidebar-close:hover {
+    background: #dedede;
+}
+
 .close-icon {
     height: 50px;
     padding: 24px;
@@ -258,6 +286,7 @@ html, #root, .App {
     position: absolute;
     right: 20px;
     top: 20px;
+    z-index: 12;
 }
 
 .Pagetitle {
