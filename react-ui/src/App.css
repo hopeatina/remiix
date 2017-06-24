@@ -299,6 +299,7 @@ html, #root, .App {
 .Menuicon {
     margin: auto;
     padding-top: 30px;
+    cursor: pointer;
 }
 
 .Reality, .Concepts, .Wrdz, .Tunez {
