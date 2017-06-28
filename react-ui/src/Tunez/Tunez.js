@@ -15,6 +15,18 @@ import play from '../Home/play.png'
 import next from '../Home/next.png'
 
 class Tunez extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {selected: null};
+        // this.switchSelection = this.switchSelection.bind(this);
+    }
+
+    switchSelection(selected) {
+        this.setState({
+            selected: selected
+        });
+    }
+
 
     render() {
 
@@ -24,15 +36,16 @@ class Tunez extends Component {
                 <div className="Pagetitle">TUNEZ</div>
                 <div className="Page-div">
                     <div className="Tunez-list">
-                        <div className="Tunez-category">Songs</div>
-                        <SongItem/>
-                        <SongItem/>
-                        <SongItem/>
-                        <SongItem/>
-                        <SongItem/>
+                        <div  className="Tunez-category">Songs</div>
+                        <SongItem onClick={this.switchSelection("New Title")}/>
+                        <SongItem  onClick={this.switchSelection("New Title2")}/>
+                        <SongItem  onClick={this.switchSelection("New Title3")}/>
+                        <SongItem  onClick={this.switchSelection("New Title4")}/>
+                        <SongItem  onClick={this.switchSelection("New Title5")}/>
                     </div>
                     <div className="Tunez-playing">
                         <div className="Tunez-songwave">
+                            <div> {this.state.selected} </div>
                         </div>
                         <div className="Tunez-ctrlback">
                             <img className="ctrlicon" src={back}></img>
