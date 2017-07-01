@@ -291,6 +291,8 @@ class Analyser extends Component {
                     } catch (_error) {
                         error = _error;
                     }
+
+
                 } else {
                     warning = document.getElementById('warning1');
                     return warning.style.display = 'block';
