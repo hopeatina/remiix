@@ -14,7 +14,7 @@ class SongItem extends Component {
     render() {
 
         return (
-            <div className="Tunez-item">
+            <div className="Tunez-item" onClick={this.props.onClick}>
                 <div className="Tunez-cover"></div>
                 <div className="Tunez-title">Tune Title</div>
                 <div className="Tunez-date">January 1, 2017</div>

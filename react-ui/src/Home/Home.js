@@ -29,7 +29,7 @@ class Home extends Component {
             <div className="home-subscribe-text">
                 <div id="revue-embed">
                     <form action="https://www.getrevue.co/profile/hope/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
-                        <div class="revue-form-group">
+                        <div className="revue-form-group">
                             <input className="home-subscribe-input" placeholder="Your Email Address..." type="email" name="member[email]" id="member_email"></input>
                             <input className="home-submit" type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"></input>
                         </div>
@@ -202,8 +202,6 @@ class Home extends Component {
                 <Route path="/contact" component={() => Contact}/>
                 {homesvg}
                 {nav}
-                {/*<Route path="/" component={() => homesvg}/>*/}
-                {/*<Route  path="/" component={() => nav}/>*/}
             </div>
         );
     }

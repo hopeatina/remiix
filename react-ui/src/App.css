@@ -646,6 +646,16 @@ html, #root, .App {
     border: 10px solid #4E1584;
 }
 
+.Tunez-selected {
+    top: -50px;
+    position: relative;
+}
+
+.audioplayer {
+    margin-top: 45%;
+    position: relative;
+}
+
 .ctrlicon {
     height: 60%;
     margin-top: 20%;
