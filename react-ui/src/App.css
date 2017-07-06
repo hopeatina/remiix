@@ -612,11 +612,11 @@ html, #root, .App {
     border-radius: 100%;
     background: #FFFFFF;
     border: 10px solid #4E1584;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: inline-block;
     margin-left: 10%;
     float: left;
-
+    box-shadow: #43186b 0px 10px 0px 0px;
+    transition: .2s linear;
 }
 
 .Tunez-ctrlnext {
@@ -630,7 +630,8 @@ html, #root, .App {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100%;
     display: inline-block;
-
+    box-shadow: #43186b 0px 10px 0px 0px;
+    transition: .2s linear;
 }
 
 .Tunez-play {
@@ -647,11 +648,23 @@ html, #root, .App {
     margin-top: 7%;
     background: #FFFFFF;
     border: 10px solid #4E1584;
+    box-shadow: #43186b 0px 10px 0px 0px;
+    transition: .2s linear;
 }
 
 .Tunez-selected {
     top: -50px;
     position: relative;
+}
+
+.Tunez-play:hover, .Tunez-ctrlback:hover,
+.Tunez-ctrlnext:hover {
+    box-shadow: none;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
 }
 
 .audioplayer {
@@ -688,6 +701,7 @@ html, #root, .App {
     height: 100%;
     width: 100%;
     position: relative;
+    top: -20px;
 }
 
 #container:after {

@@ -12,6 +12,7 @@ import Overlay from '../Overlay.js';
 import SongItem from './SongItem.js'
 import back from '../Home/back.png'
 import play from '../Home/play.png'
+import pause from '../Home/next.png'
 import next from '../Home/next.png'
 import ReactAudioPlayer from 'react-audio-player';
 import Waveform from './Waveform.js';
@@ -21,7 +22,7 @@ class Tunez extends Component {
 
     constructor() {
         super();
-        this.state = {selected: ""};
+        this.state = {selected: "Select a Song", playimg: play};
         // this.switchSelection = this.switchSelection.bind(this);
     }
 
@@ -32,10 +33,11 @@ class Tunez extends Component {
         });
     }
 
-    playSong() {
-
+    switchPlay(){
+        this.setState({
+            playimg: this.state.playimg == play ? pause : play
+        });
     }
-
 
     render() {
 
@@ -57,13 +59,13 @@ class Tunez extends Component {
                             <div className="Tunez-selected"> {this.state.selected} </div>
                             <div id="intro"></div>
                             {/*<ReactAudioPlayer src={song} controls className="audioplayer"/>*/}
-                            <Waveform/>
+                            <Waveform song={song}/>
                         </div>
                         <div className="Tunez-ctrlback">
                             <img className="ctrlicon" src={back}></img>
                         </div>
-                        <div className="Tunez-play">
-                            <img className="ctrlicon" src={play}></img>
+                        <div onClick={() => this.switchPlay()} className="Tunez-play">
+                            <img className="ctrlicon" src={this.state.playimg}></img>
                         </div>
                         <div className="Tunez-ctrlnext">
                             <img className="ctrlicon" src={next}></img>
