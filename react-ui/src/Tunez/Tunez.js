@@ -53,9 +53,10 @@ class Tunez extends Component {
                         <SongItem onClick={() => this.switchSelection("New Title5")}/>
                     </div>
                     <div className="Tunez-playing">
-                        <div id="waveform" className="Tunez-songwave">
+                        <div  className="Tunez-songwave">
                             <div className="Tunez-selected"> {this.state.selected} </div>
-                            <ReactAudioPlayer src={song} controls className="audioplayer"/>
+                            <div id="intro"></div>
+                            {/*<ReactAudioPlayer src={song} controls className="audioplayer"/>*/}
                             <Waveform/>
                         </div>
                         <div className="Tunez-ctrlback">
