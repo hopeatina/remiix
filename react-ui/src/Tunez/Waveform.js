@@ -127,14 +127,7 @@ class Analyser extends Component {
             SHOW_AVERAGE = true,
 
             AudioContext = (window.AudioContext || window.webkitAudioContext),
-            floor = Math.floor,
-            round = Math.round,
-            random = Math.random,
-            sin = Math.sin,
-            cos = Math.cos,
-            PI = Math.PI,
             PI_TWO = PI * 2,
-            PI_HALF = PI / 180,
 
             w = 0,
             h = 0,
@@ -176,9 +169,9 @@ class Analyser extends Component {
             return document.getElementById('loading').className = "hide";
         }
 
-        function updateLoadingMessage(text) {
-            msgElement.textContent = text;
-        }
+        // function updateLoadingMessage(text) {
+        //     msgElement.textContent = text;
+        // }
 
         function initializeAudio() {
             var xmlHTTP = new XMLHttpRequest();

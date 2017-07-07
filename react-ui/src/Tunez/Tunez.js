@@ -22,7 +22,7 @@ class Tunez extends Component {
 
     constructor() {
         super();
-        this.state = {selected: "Select a Song", playimg: play};
+        this.state = {selected: "Select a Song", playimg: play, song: song};
         // this.switchSelection = this.switchSelection.bind(this);
     }
 
@@ -35,7 +35,8 @@ class Tunez extends Component {
 
     switchPlay(){
         this.setState({
-            playimg: this.state.playimg == play ? pause : play
+            playimg: this.state.playimg == play ? pause : play,
+            song: song
         });
     }
 
@@ -46,29 +47,29 @@ class Tunez extends Component {
                 <Overlay/>
                 <div className="Pagetitle">TUNEZ</div>
                 <div className="Page-div">
-                    <div className="Tunez-list">
+                    <div className  ="Tunez-list">
                         <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">Songs</div>
-                        <SongItem onClick={() => this.switchSelection("New Title")}/>
-                        <SongItem onClick={() => this.switchSelection("New Title2")}/>
-                        <SongItem onClick={() => this.switchSelection("New Title3")}/>
-                        <SongItem onClick={() => this.switchSelection("New Title4")}/>
-                        <SongItem onClick={() => this.switchSelection("New Title5")}/>
+                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
+                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
+                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
+                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
+                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                     </div>
                     <div className="Tunez-playing">
                         <div  className="Tunez-songwave">
                             <div className="Tunez-selected"> {this.state.selected} </div>
                             <div id="intro"></div>
                             {/*<ReactAudioPlayer src={song} controls className="audioplayer"/>*/}
-                            <Waveform song={song}/>
+                            <Waveform song={this.state.song}/>
                         </div>
                         <div className="Tunez-ctrlback">
-                            <img className="ctrlicon" src={back}></img>
+                            <img alt="a thing" className="ctrlicon" src={back}></img>
                         </div>
                         <div onClick={() => this.switchPlay()} className="Tunez-play">
-                            <img className="ctrlicon" src={this.state.playimg}></img>
+                            <img alt="a thing" className="ctrlicon" src={this.state.playimg}></img>
                         </div>
                         <div className="Tunez-ctrlnext">
-                            <img className="ctrlicon" src={next}></img>
+                            <img alt="a thing" className="ctrlicon" src={next}></img>
                         </div>
 
                     </div>

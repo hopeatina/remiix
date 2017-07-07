@@ -8,7 +8,7 @@ import '../App.css';
 // import concepts from './concepts.png'
 // import tunez from './tunez.png'
 // import wrdz from './wrdz.png'
-import {Link, Route} from 'react-router-dom'
+// import {Link, Route} from 'react-router-dom'
 import Overlay from '../Overlay.js';
 import arrow from '../Home/leftarrow.png'
 
@@ -25,11 +25,11 @@ class Concepts extends Component {
                 <div className="Page-div">
                     <div className="Concepts-view">
                         <div className="Concepts-back">
-                            <img src={arrow}></img>
+                            <img alt="a thing" src={arrow}></img>
                             <div >Previous</div>
                         </div>
                         <div className="Concepts-next">
-                            <img src={arrow}></img>
+                            <img alt="a thing" src={arrow}></img>
                             <div className="arrow-text">Next</div>
                         </div>
                     </div>

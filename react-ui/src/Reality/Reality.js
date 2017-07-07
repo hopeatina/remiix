@@ -3,15 +3,8 @@
  */
 import React, {Component} from 'react';
 import '../App.css';
-import reality from '../Home/reality.png';
-import concepts from '../Home/concepts.png';
-import tunez from '../Home/tunez.png';
-import wrdz from '../Home/wrdz.png';
-import {Link, Route} from 'react-router-dom';
-import menuicon from '../Home/menuicon.png';
-import homeicon from '../Home/remixlogoblack.png';
+// import {Link, Route} from 'react-router-dom';
 import leftarrow from '../Home/leftarrow.png'
-import rightarrow from '../Home/rightarrow.png'
 import Overlay from '../Overlay.js';
 
 
@@ -30,14 +23,14 @@ class Reality extends Component {
                     <div className="Reality-control-right"></div>
                     <div className="Reality-carousel-div">
                         <div className="Reality-arrow-left">
-                            <img src={leftarrow}></img>
+                            <img alt="" src={leftarrow}></img>
                         </div>
                             <div className="Reality-viewitem"></div>
                             <div className="Reality-viewitem"></div>
                             <div className="Reality-viewitem"></div>
                             <div className="Reality-viewitem"></div>
                         <div className="Reality-arrow-right">
-                            <img src={leftarrow}></img>
+                            <img alt="" src={leftarrow}></img>
                         </div>
                     </div>
                 </div>

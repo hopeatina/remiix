@@ -36,20 +36,20 @@ class Overlay extends Component {
 
         const Sidebar = <div className="Sidebar">
             <div onClick={this.handleClick} className="Sidebar-close">
-                <img className="close-icon" src={close}></img>
+                <img alt="a thing" className="close-icon" src={close}></img>
             </div>
             <div className="Sidebar-1">
-                <Link to="/reality"><img className="Sidebar-img" src={reality} width="auto" height="90%"></img></Link>
+                <Link to="/reality"><img alt="a thing" className="Sidebar-img" src={reality} width="auto" height="90%"></img></Link>
             </div>
             <div className="Sidebar-2">
-                <Link to="/wrdz"><img className="Sidebar-img" src={wrdz} width="auto" height="90%"></img></Link>
+                <Link to="/wrdz"><img alt="a thing" className="Sidebar-img" src={wrdz} width="auto" height="90%"></img></Link>
             </div>
             <div className="Sidebar-3">
-                <Link to="/concepts"><img className="Sidebar-img" src={concepts} width="auto"
+                <Link to="/concepts"><img alt="a thing" className="Sidebar-img" src={concepts} width="auto"
                                           height="90%"></img></Link>
             </div>
             <div className="Sidebar-4">
-                <Link to="/tunez"><img className="Sidebar-img" src={tunez} width="auto"
+                <Link to="/tunez"><img alt="a thing" className="Sidebar-img" src={tunez} width="auto"
                                        height="90%"></img></Link>
             </div>
         </div>;
@@ -158,12 +158,12 @@ class Overlay extends Component {
                 </div>
                 <div className="Sideoverlay">
                     <div onClick={this.handleClick} className="Menuicon">
-                        <img src={menuicon} height='50px'></img>
+                        <img alt="a thing" src={menuicon} height='50px'></img>
                     </div>
                 </div>
                 <Link to="/">
                     <div className="Homeicon">
-                        <img src={homeicon} height='50px'></img>
+                        <img alt="a thing" src={homeicon} height='50px'></img>
                     </div>
                 </Link>
                 {this.state.isNavOpen ? null : Sidebar}
