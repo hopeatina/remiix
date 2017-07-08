@@ -15,32 +15,44 @@ const PORT = process.env.PORT || 5000;
 const router = express.Router();
 
 console.log(username, password);
-mongoose.connect('mongodb://' + username + ':' + password + '@ds145158.mlab.com:45158/heroku_mnkk46b7');
+mongoose.connect('mongodb://' + username + ':' + password + '@ds145158.mlab.com:45158/heroku_mnkk46b7', function(error){
+    if(error)
+        console.log(error);
+    else
+        console.log("connection successful");
+        console.log(mongoose.connection.readyState);
+
+});
+// Use native promises
+mongoose.Promise = global.Promise;
+// assert.equal(query.exec().constructor, global.Promise);
+
 // Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, './react-ui/build')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 //now we can set the route path & initialize the API
-// router.get('/', function (req, res) {
-//     res.json({message: 'API Initialized!'});
-// });
+router.get('/', function (req, res) {
+    res.json({message: 'API Initialized!'});
+});
 
 
 //adding the /posts route to our /api router
-router.route('/posts')
-//retrieve all posts from the database
-    .get(function (req, res) {
+router.get('/posts', function (req, res) {
         //looks at our Post Schema
-        Post.find(function (err, posts) {
-            if (err)
-                res.send(err);
-            //responds with a json object of our database posts.
-            res.json(posts)
-        });
-    })
+        // console.log(Post);
+    res.json({message: 'We getting posts'});
+        // Post.findOne( {},'post', function (err, posts) {
+        //     if (err)
+        //         res.send(err);
+        //     //responds with a json object of our database posts.
+        //     res.json(posts)
+        // });
+    });
+
     //post new post to the database
-    .post(function (req, res) {
+router.post('/posts', function (req, res) {
         var post = new Post();
         //body parser lets us use the req.body
         post.title = req.body.title;

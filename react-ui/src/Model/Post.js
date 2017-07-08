@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 //object that shows the shape of your database entries.
 var PostSchema = new Schema({
     title: String,
-    date: Date,
+    date: String,
     htmlText: String
 });
 //export our module to use in server.js
