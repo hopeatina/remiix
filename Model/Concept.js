@@ -5,10 +5,12 @@ var Schema = mongoose.Schema;
 
 //create new instance of the mongoose.schema. the schema takes an
 //object that shows the shape of your database entries.
-var SongSchema = new Schema({
+var ConceptSchema = new Schema({
     title: String,
     date: Date,
-    htmlText: String
+    description: String,
+    mainImg: String,
+    more: Array
 });
 //export our module to use in server.js
-module.exports = mongoose.model('Song', SongSchema);
+module.exports = mongoose.model('Concept', ConceptSchema);
