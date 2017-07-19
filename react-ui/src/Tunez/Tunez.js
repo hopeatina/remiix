@@ -3,10 +3,7 @@
  */
 import React, {Component} from 'react';
 import '../App.css';
-// import reality from './reality.png'
-// import concepts from './concepts.png'
-// import tunez from './tunez.png'
-// import wrdz from './wrdz.png'
+import axios from 'axios';
 import {Link, Route} from 'react-router-dom'
 import Overlay from '../Overlay.js';
 import SongItem from './SongItem.js'
@@ -22,7 +19,7 @@ class Tunez extends Component {
 
     constructor() {
         super();
-        this.state = {selected: "Select a Song", playimg: play, song: song};
+        this.state = {selected: "Select a Song", playimg: play, song: song, other: null};
         // this.switchSelection = this.switchSelection.bind(this);
     }
 
@@ -33,11 +30,20 @@ class Tunez extends Component {
         });
     }
 
-    switchPlay(){
+    switchPlay() {
         this.setState({
             playimg: this.state.playimg == play ? pause : play,
             song: song
         });
+    }
+
+    componentDidMount() {
+        axios.get(`http://localhost:5000/api/post`)
+            .then(function(res){
+                console.log(res.data);
+                const posts = res.data;
+                // this.setState({other: posts});
+            });
     }
 
     render() {
@@ -47,16 +53,17 @@ class Tunez extends Component {
                 <Overlay/>
                 <div className="Pagetitle">TUNEZ</div>
                 <div className="Page-div">
-                    <div className  ="Tunez-list">
+                    <div className="Tunez-list">
                         <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">Songs</div>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
+                        {this.state.other}
                     </div>
                     <div className="Tunez-playing">
-                        <div  className="Tunez-songwave">
+                        <div className="Tunez-songwave">
                             <div className="Tunez-selected"> {this.state.selected} </div>
                             <div id="intro"></div>
                             {/*<ReactAudioPlayer src={song} controls className="audioplayer"/>*/}

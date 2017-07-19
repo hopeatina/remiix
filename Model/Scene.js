@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
 var SceneSchema = new Schema({
     title: String,
     createDate: Date,
-    updated: {type: Date, default: Date.now},
+    updated: {type: Date, default: Date.now()},
     sceneRef: String,
     more: Array,
     thumbnail: String

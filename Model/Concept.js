@@ -7,7 +7,8 @@ var Schema = mongoose.Schema;
 //object that shows the shape of your database entries.
 var ConceptSchema = new Schema({
     title: String,
-    date: Date,
+    createDate: Date,
+    updated: {type: Date, default: new Date()},
     description: String,
     mainImg: String,
     more: Array
