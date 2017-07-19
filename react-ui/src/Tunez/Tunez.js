@@ -38,11 +38,12 @@ class Tunez extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/post`)
+        var self = this;
+        axios.get(`/api/post`)
             .then(function(res){
                 console.log(res.data);
-                const posts = res.data;
-                // this.setState({other: posts});
+                const posts = res.data[0].title;
+                self.setState({other: posts});
             });
     }
 
@@ -54,13 +55,13 @@ class Tunez extends Component {
                 <div className="Pagetitle">TUNEZ</div>
                 <div className="Page-div">
                     <div className="Tunez-list">
-                        <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">Songs</div>
+                        <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">{this.state.other}</div>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
                         <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
-                        {this.state.other}
+
                     </div>
                     <div className="Tunez-playing">
                         <div className="Tunez-songwave">

@@ -12,6 +12,7 @@ const router = express.Router();
 //adding the /posts route to our /api router
 router.get('/post', function (req, res) {
     // looks at our Post Schema
+    console.log(res);
     Post.find(function(err, posts) {
         if (err) {
             res.json(err)
