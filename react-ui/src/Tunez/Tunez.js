@@ -49,7 +49,9 @@ class Tunez extends Component {
                 console.log(res.data);
                 const songs = res.data[0].title;
                 self.setState({other: songs});
-            });
+            }).catch(function(err) {
+                console.log(err);
+        });
     }
 
     render() {

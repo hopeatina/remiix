@@ -1,16 +1,16 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-
 var bodyParser = require('body-parser');
+const router = require('./routes');
 
 var MONGO_URI = process.env.MONGODB_URI;
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-app.set("PORT", process.env.PORT || 3001);
+// app.set("PORT", process.env.PORT || 3001);
 
-const router = require('./routes');
+
 
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
     replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
@@ -22,11 +22,15 @@ mongoose.connect(MONGO_URI, options, function (error) {
     else
         console.log("connection successful");
     console.log(mongoose.connection.readyState);
-
 });
 // Use native promises
 // mongoose.Promise = global.Promise;
 // assert.equal(query.exec().constructor, global.Promise);
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // Priority serve any static files.
 if (process.env.NODE_ENV === "production") {
@@ -38,11 +42,6 @@ app.use(bodyParser.json());
 
 // Answer API requests.
 app.use('/api', router);
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
 
 // All remaining requests return the React app, so it can handle routing.
 // app.get('*', function (request, response) {
