@@ -7,7 +7,7 @@ import './App.css';
 // import concepts from './concepts.png'
 // import tunez from './tunez.png'
 // import wrdz from './wrdz.png'
-import {Link, Route} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import menuicon from './Home/menuicon.png';
 import homeicon from './Home/remixlogoblack.png';
 import reality from './Home/reality.png'

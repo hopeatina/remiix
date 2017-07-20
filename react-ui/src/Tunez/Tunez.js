@@ -4,14 +4,12 @@
 import React, {Component} from 'react';
 import '../App.css';
 import axios from 'axios';
-import {Link, Route} from 'react-router-dom'
 import Overlay from '../Overlay.js';
 import SongItem from './SongItem.js'
 import back from '../Home/back.png'
 import play from '../Home/play.png'
 import pause from '../Home/pause.png'
 import next from '../Home/next.png'
-import ReactAudioPlayer from 'react-audio-player';
 import Waveform from './Waveform.js';
 import song from '../Data/FirstLivev2.wav';
 import song2 from '../Data/GAFlav3-allind.wav';
@@ -40,7 +38,7 @@ class Tunez extends Component {
 
     switchPlay(chosen) {
         this.setState({
-            playimg: this.state.playimg == play ? pause : play,
+            playimg: this.state.playimg === play ? pause : play,
         });
     }
 

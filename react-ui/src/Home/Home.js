@@ -33,7 +33,7 @@ class Home extends Component {
                             <input className="home-subscribe-input" placeholder="Your Email Address..." type="email" name="member[email]" id="member_email"></input>
                             <input className="home-submit" type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"></input>
                         </div>
-                        {/*<div class="revue-form-group">*/}
+                        {/*<div class=" revue-form-group">*/}
                             {/*<label for="member_first_name">First name <span class="optional">(Optional)</span></label>*/}
                             {/*<input class="revue-form-field" placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name">*/}
                         {/*</div>*/}
@@ -48,16 +48,16 @@ class Home extends Component {
             <div className="home-options">
 
                 <Link to="/reality">
-                    <div className="option-1"><img src={reality} className="home-img" height="200"></img></div>
+                    <div className="option-1"><img alt="athing"  src={reality} className="home-img" height="200"></img></div>
                 </Link>
                 <Link to="/wrdz">
-                    <div className="option-2"><img src={wrdz} className="home-img" height="200"></img></div>
+                    <div className="option-2"><img alt="athing"  src={wrdz} className="home-img" height="200"></img></div>
                 </Link>
                 <Link to="/concepts">
-                    <div className="option-3"><img src={concepts} className="home-img" height="200"></img></div>
+                    <div className="option-3"><img alt="athing"  src={concepts} className="home-img" height="200"></img></div>
                 </Link>
                 <Link to="/tunez">
-                    <div className="option-4"><img src={tunez} className="home-img" height="200"></img></div>
+                    <div className="option-4"><img alt="athing"  src={tunez} className="home-img" height="200"></img></div>
                 </Link>
 
             </div>

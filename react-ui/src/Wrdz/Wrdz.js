@@ -3,11 +3,6 @@
  */
 import React, {Component} from 'react';
 import '../App.css';
-// import reality from './reality.png'
-// import concepts from './concepts.png'
-// import tunez from './tunez.png'
-// import wrdz from './wrdz.png'
-import {Link, Route} from 'react-router-dom'
 import Overlay from '../Overlay.js';
 import arrow from '../Home/leftarrow.png'
 

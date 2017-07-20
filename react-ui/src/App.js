@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './Home/Home.js'
 import Reality from './Reality/Reality.js'
 import Wrdz from './Wrdz/Wrdz.js'
@@ -11,8 +11,8 @@ class App extends Component {
 
 
     render() {
-        const NotFound = () => (
-            <h1>404.. This page is not found!</h1>);
+        // const NotFound = () => (
+        //     <h1>404.. This page is not found!</h1>);
         return (
             <BrowserRouter>
                 <div>

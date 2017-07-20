@@ -2,16 +2,15 @@
  * Created by theon on 6/29/2017.
  */
 import React, {Component} from 'react';
-import Sketch from 'sketch-js';
 
 const WIDTH = 142;
 const HEIGHT = 142;
 
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
-const compressor = audioContext.createDynamicsCompressor();
+// const compressor = audioContext.createDynamicsCompressor();
 
-var ALPHA, AudioAnalyser, COLORS, MP3_PATH, NUM_BANDS, NUM_PARTICLES, Particle, SCALE, SIZE, SMOOTHING, SPEED, SPIN;
+var ALPHA, AudioAnalyser, COLORS, MP3_PATH, NUM_PARTICLES, Particle, SCALE, SIZE, SMOOTHING, SPEED, SPIN;
 var round = Math.round,
 
 
@@ -47,7 +46,7 @@ SIZE = {
 };
 
 COLORS = ['#69D2E7', '#1B676B', '#BEF202', '#EBE54D', '#00CDAC', '#1693A5', '#F9D423', '#FF4E50', '#E7204E', '#0CCABA', '#FF006F'];
-let context = null;
+// let context = null;
 
 class Analyser extends Component {
     constructor(props, context) {
@@ -81,7 +80,7 @@ class Analyser extends Component {
             fftSize = 1024,
             // [32, 64, 128, 256, 512, 1024, 2048]
 
-            background_color = "rgba(0, 0, 1, 1)",
+            // background_color = "rgba(0, 0, 1, 1)",
             background_gradient_color_1 = "#FFFFFF",
             background_gradient_color_2 = "rgba(135, 38, 225, 0.4)",
             background_gradient_color_3 = "rgba(41, 41, 41, 0.5)",
@@ -126,7 +125,7 @@ class Analyser extends Component {
             startedAt, pausedAt,
 
             rotation = 0,
-            msgElement = document.querySelector('#loading .msg'),
+            // msgElement = document.querySelector('#loading .msg'),
             avg, ctx, actx, asource, gainNode, analyser, frequencyData, frequencyDataLength, timeData, audio_buffer;
 
 
