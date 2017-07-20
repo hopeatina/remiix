@@ -400,8 +400,8 @@ html, #root, .App {
     height: 80%;
     top: 10%;
     position: relative;
-    margin-left: 2%;
-    width: 180px;
+    margin-left: 4%;
+    width: 20%;
     background: rgba(208, 213, 78, 0.67);
     border-radius: 10px;
     float: left;

@@ -9,41 +9,48 @@ import Overlay from '../Overlay.js';
 import SongItem from './SongItem.js'
 import back from '../Home/back.png'
 import play from '../Home/play.png'
-import pause from '../Home/next.png'
+import pause from '../Home/pause.png'
 import next from '../Home/next.png'
 import ReactAudioPlayer from 'react-audio-player';
 import Waveform from './Waveform.js';
 import song from '../Data/FirstLivev2.wav';
+import song2 from '../Data/GAFlav3-allind.wav';
 
 class Tunez extends Component {
 
     constructor() {
         super();
-        this.state = {selected: "Select a Song", playimg: play, song: song, other: null};
+        console.log(song);
+        this.state = {selected: "Select a Song",
+            playimg: play,
+            song: song,
+            other: null,
+            defaultsong: {songref: song, title: "FirstLivev2", createDate: "January 1, 2017", time: "00:49"},
+            secondsong: {songref: song2, title: "GAFlav3", createDate: "January 1, 2017", time: "00:39"}};
         // this.switchSelection = this.switchSelection.bind(this);
     }
 
-    switchSelection(j) {
-        console.log(j);
+    switchSelection(chosen) {
+        console.log(chosen);
         this.setState({
-            selected: j
+            selected: chosen.title,
+            song: chosen.songref
         });
     }
 
-    switchPlay() {
+    switchPlay(chosen) {
         this.setState({
             playimg: this.state.playimg == play ? pause : play,
-            song: song
         });
     }
 
     componentDidMount() {
         var self = this;
-        axios.get(`/api/post`)
+        axios.get(`/api/song`)
             .then(function(res){
                 console.log(res.data);
-                const posts = res.data[0].title;
-                self.setState({other: posts});
+                const songs = res.data[0].title;
+                self.setState({other: songs});
             });
     }
 
@@ -55,13 +62,12 @@ class Tunez extends Component {
                 <div className="Pagetitle">TUNEZ</div>
                 <div className="Page-div">
                     <div className="Tunez-list">
-                        <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">{this.state.other}</div>
-                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
-                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
-                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
-                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
-                        <SongItem onClick={() => this.switchSelection("FirstLivev2")}/>
-
+                        <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">Songs</div>
+                        <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
+                        <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
+                        <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
+                        <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
+                        <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
                     </div>
                     <div className="Tunez-playing">
                         <div className="Tunez-songwave">

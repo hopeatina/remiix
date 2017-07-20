@@ -55,18 +55,6 @@ class Analyser extends Component {
         this.analyser = audioContext.createAnalyser();
     }
 
-    // componentDidMount() {
-    //     // analyzer
-    //     this.analyser.fftSize = 2048;
-    //     this.bufferLength = this.analyser.fftSize;
-    //     this.dataArray = new Uint8Array(this.bufferLength);
-    //     this.analyser.getByteTimeDomainData(this.dataArray);
-    //     this.canvas = document.getElementById('analyser-canvas');
-    //     this.canvasContext = this.canvas.getContext('2d');
-    //
-    //     this.draw();
-    // }
-
     componentDidMount() {
 
         var random = Math.random,
@@ -759,7 +747,6 @@ class Analyser extends Component {
         //     }
         // };
     }
-
 
     draw() {
         requestAnimationFrame(this.draw.bind(this));

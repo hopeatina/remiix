@@ -16,9 +16,9 @@ class SongItem extends Component {
         return (
             <div className="Tunez-item" onClick={this.props.onClick}>
                 <div className="Tunez-cover"></div>
-                <div className="Tunez-title">FirstLivev2</div>
-                <div className="Tunez-date">July 1, 2017</div>
-                <div className="Tunez-length">00:39</div>
+                <div className="Tunez-title">{this.props.attr.title}</div>
+                <div className="Tunez-date">{this.props.attr.createDate}</div>
+                <div className="Tunez-length">{this.props.attr.time}</div>
             </div>
         )
     }
