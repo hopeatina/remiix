@@ -407,6 +407,11 @@ html, #root, .App {
     float: left;
 }
 
+.Reality-arrow-size {
+    margin: auto;
+    height: 121px;
+    display: block;
+}
 .Wrdz-artcontent {
     margin: 20px;
     text-align: left;
