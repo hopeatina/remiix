@@ -38,6 +38,11 @@ app.use(bodyParser.json());
 
 // Answer API requests.
 app.use('/api', router);
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // All remaining requests return the React app, so it can handle routing.
 // app.get('*', function (request, response) {
