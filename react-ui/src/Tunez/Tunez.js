@@ -22,7 +22,7 @@ class Tunez extends Component {
         this.state = {selected: "Select a Song",
             playimg: play,
             song: song,
-            other: null,
+            other: {},
             defaultsong: {songref: song, title: "FirstLivev2", createDate: "January 1, 2017", time: "00:49"},
             secondsong: {songref: song2, title: "GAFlav3", createDate: "January 1, 2017", time: "00:39"}};
         // this.switchSelection = this.switchSelection.bind(this);
@@ -36,7 +36,7 @@ class Tunez extends Component {
         });
     }
 
-    switchPlay(chosen) {
+    switchPlay() {
         this.setState({
             playimg: this.state.playimg === play ? pause : play,
         });
@@ -47,7 +47,7 @@ class Tunez extends Component {
         axios.get(`/api/song`)
             .then(function(res){
                 console.log(res.data);
-                const songs = res.data[0].title;
+                const songs = res.data[0];
                 self.setState({other: songs});
             }).catch(function(err) {
                 console.log(err);
@@ -65,7 +65,7 @@ class Tunez extends Component {
                         <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">Songs</div>
                         <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
                         <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
-                        <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
+                        <SongItem attr={this.state.other} onClick={() => this.switchSelection(this.state.defaultsong)}/>
                         <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
                         <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
                     </div>

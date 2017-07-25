@@ -23,14 +23,14 @@ class Reality extends Component {
                     <div className="Reality-control-right"></div>
                     <div className="Reality-carousel-div">
                         <div className="Reality-arrow-left">
-                            <img alt="" src={leftarrow}></img>
+                            <img className="Reality-arrow-size" alt="" src={leftarrow}></img>
                         </div>
                             <div className="Reality-viewitem"></div>
                             <div className="Reality-viewitem"></div>
                             <div className="Reality-viewitem"></div>
                             <div className="Reality-viewitem"></div>
                         <div className="Reality-arrow-right">
-                            <img alt="" src={leftarrow}></img>
+                            <img className="Reality-arrow-size"  alt="" src={leftarrow}></img>
                         </div>
                     </div>
                 </div>
