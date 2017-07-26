@@ -332,7 +332,7 @@ html, #root, .App {
 
 .Reality-view {
     position: absolute;
-    height: 63%;
+    max-height: 90%;
     width: 64%;
     background: white;
     margin-left: calc(130px + 10%);
@@ -355,6 +355,11 @@ html, #root, .App {
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    display: block;
+    background: transparent;
+
 }
 
 .Reality-control-left {

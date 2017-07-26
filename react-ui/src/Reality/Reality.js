@@ -7,11 +7,22 @@ import '../App.css';
 import leftarrow from '../Home/leftarrow.png'
 import Overlay from '../Overlay.js';
 import { Unity } from 'react-unity-webgl';
-import Realityjson from './Realityweb/Build/Realityweb.json'
 
 
 
 class Reality extends Component {
+    constructor() {
+        super();
+        this.state = {
+            Unity: <div id="gameContainerId" ></div>
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            Unity: <div id="gameContainerId" ></div>
+        })
+    }
 
     render() {
 
@@ -21,7 +32,7 @@ class Reality extends Component {
                 <div className="Pagetitle">REALITY</div>
                 <div className="Reality-view">
                     {/*<Unity src={Realityjson} />*/}
-                    <div id="gameContainerId" ></div>
+                    {this.state.Unity}
                     <div className="Reality-control-left">
                     </div>
                     <div className="Reality-control-right"></div>
