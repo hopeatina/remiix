@@ -6,6 +6,8 @@ import '../App.css';
 // import {Link, Route} from 'react-router-dom';
 import leftarrow from '../Home/leftarrow.png'
 import Overlay from '../Overlay.js';
+import { Unity } from 'react-unity-webgl';
+import Realityjson from './Realityweb/Build/Realityweb.json'
 
 
 
@@ -18,6 +20,8 @@ class Reality extends Component {
                 <Overlay/>
                 <div className="Pagetitle">REALITY</div>
                 <div className="Reality-view">
+                    {/*<Unity src={Realityjson} />*/}
+                    <div id="gameContainerId" ></div>
                     <div className="Reality-control-left">
                     </div>
                     <div className="Reality-control-right"></div>

@@ -342,8 +342,23 @@ html, #root, .App {
     border-radius: 20px;
 }
 
-.Reality-control-left {
+#gameContainerId {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
     position: relative;
+    background: rgba(255, 255, 255, 0);
+    height: 100%;
+}
+
+#gameContainerId canvas {
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius: 10px;
+}
+
+.Reality-control-left {
+    position: absolute;
     height: 100px;
     width: 100px;
     background: white;
@@ -371,10 +386,10 @@ html, #root, .App {
     /* background: white; */
     border-radius: 10px;
     border: 1px #d0d54e solid;
-    position: relative;
+    position: absolute;
     padding-left: 10px;
     padding-right: 10px;
-    top: 85%;
+    top: 111%;
     left: -10px;
     background: rgba(251, 252, 229, 0.95);
 }
