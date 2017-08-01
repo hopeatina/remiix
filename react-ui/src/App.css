@@ -76,6 +76,7 @@ html, #root, .App {
     font-size: 24px;
     font-family: 'Share Tech Mono';
     border: none;
+    cursor: pointer;
     color: white;
     padding: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -333,6 +334,7 @@ html, #root, .App {
 .Reality-view {
     position: absolute;
     max-height: 90%;
+    min-height: 64%;
     width: 64%;
     background: white;
     margin-left: calc(130px + 10%);
@@ -371,6 +373,7 @@ html, #root, .App {
     left: 10%;
     border-radius: 100%;
     border: 10px solid #D0D54E;
+    cursor: pointer;
 }
 
 .Reality-control-right {
@@ -383,6 +386,7 @@ html, #root, .App {
     right: 10%;
     border-radius: 100%;
     border: 10px solid #D0D54E;
+    cursor: pointer;
 }
 
 .Reality-carousel-div {
@@ -469,6 +473,7 @@ html, #root, .App {
     position: absolute;
     left: -120px;
     top: 30%;
+    cursor: pointer;
     transition: .3s ease;
 }
 
@@ -476,6 +481,7 @@ html, #root, .App {
     position: absolute;
     right: -120px;
     top: 30%;
+    cursor: pointer;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -548,6 +554,7 @@ html, #root, .App {
     top: 30%;
     width: 112px;
     transition: .3s ease;
+    cursor: pointer;
 }
 
 .Concepts-next {
@@ -560,6 +567,7 @@ html, #root, .App {
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
     transition: .3s ease;
+    cursor: pointer;
 }
 
 .Concepts-next:hover {
@@ -687,6 +695,7 @@ html, #root, .App {
     float: left;
     box-shadow: #43186b 0px 10px 0px 0px;
     transition: .2s linear;
+    cursor: pointer;
 }
 
 .Tunez-ctrlnext {
@@ -702,6 +711,7 @@ html, #root, .App {
     display: inline-block;
     box-shadow: #43186b 0px 10px 0px 0px;
     transition: .2s linear;
+    cursor: pointer;
 }
 
 .Tunez-play {
@@ -719,6 +729,7 @@ html, #root, .App {
     background: #FFFFFF;
     border: 10px solid #4E1584;
     box-shadow: #43186b 0px 10px 0px 0px;
+    cursor: pointer;
     transition: .2s linear;
 }
 

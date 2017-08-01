@@ -25,7 +25,6 @@ class Tunez extends Component {
             other: {},
             defaultsong: {songref: song, title: "FirstLivev2", createDate: "January 1, 2017", time: "00:49"},
             secondsong: {songref: song2, title: "GAFlav3", createDate: "January 1, 2017", time: "00:39"}};
-        // this.switchSelection = this.switchSelection.bind(this);
     }
 
     switchSelection(chosen) {
