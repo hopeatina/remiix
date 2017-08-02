@@ -8,6 +8,26 @@ import arrow from '../Home/leftarrow.png'
 
 class Wrdz extends Component {
 
+    constructor() {
+        super();
+        console.log(song);
+        this.state = {
+            post: null,
+        };
+    }
+
+    componentDidMount() {
+        var self = this;
+        axios.get(`/api/posts`)
+            .then(function(posts){
+                console.log(res.data);
+                const posts = res.data;
+                self.setState({posts: posts});
+            }).catch(function(err) {
+            console.log(err);
+        });
+    }
+
     render() {
 
         return (

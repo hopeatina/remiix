@@ -111,8 +111,8 @@ html, #root, .App {
 
 .option-1 {
     display: inline-block;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border: 15px solid #F9FF70;
     background: white;
     margin: 15px;
@@ -120,8 +120,8 @@ html, #root, .App {
 
 .option-4 {
     display: inline-block;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border: 15px solid #7C10E1;
     background: white;
     margin: 15px;
@@ -129,8 +129,8 @@ html, #root, .App {
 
 .option-3 {
     display: inline-block;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border: 15px solid #ABFE59;
     background: white;
     margin: 15px;
@@ -138,8 +138,8 @@ html, #root, .App {
 
 .option-2 {
     display: inline-block;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border: 15px solid #2E8CE6;
     background: white;
     margin: 15px;
