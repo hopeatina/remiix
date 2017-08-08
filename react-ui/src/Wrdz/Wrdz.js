@@ -4,13 +4,14 @@
 import React, {Component} from 'react';
 import '../App.css';
 import Overlay from '../Overlay.js';
-import arrow from '../Home/leftarrow.png'
+import arrow from '../Home/leftarrow.png';
+import axios from 'axios';
+
 
 class Wrdz extends Component {
 
     constructor() {
         super();
-        console.log(song);
         this.state = {
             post: null,
         };
@@ -19,7 +20,7 @@ class Wrdz extends Component {
     componentDidMount() {
         var self = this;
         axios.get(`/api/posts`)
-            .then(function(posts){
+            .then(function(res){
                 console.log(res.data);
                 const posts = res.data;
                 self.setState({posts: posts});
