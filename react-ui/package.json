@@ -14,7 +14,14 @@
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
-  "proxy": "http://localhost:3001/",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001",
+      "pathRewrite": {
+        "^/api": "/"
+      }
+    }
+  },
   "scripts": {
     "start": "react-scripts start ",
     "build": "react-scripts build",
