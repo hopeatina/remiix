@@ -12,16 +12,9 @@
     "sketch-js": "^1.1.3"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "^1.0.7"
   },
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:3001",
-      "pathRewrite": {
-        "^/api": "/"
-      }
-    }
-  },
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts start ",
     "build": "react-scripts build",
