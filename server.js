@@ -8,8 +8,6 @@ var MONGO_URI = process.env.MONGODB_URI;
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-// app.set("PORT", process.env.PORT || 3001);
-
 
 
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
@@ -23,14 +21,15 @@ mongoose.connect(MONGO_URI, options, function (error) {
         console.log("connection successful");
     console.log(mongoose.connection.readyState);
 });
+
 // Use native promises
 // mongoose.Promise = global.Promise;
 // assert.equal(query.exec().constructor, global.Promise);
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
 
 // Priority serve any static files.
 if (process.env.NODE_ENV === "production") {
