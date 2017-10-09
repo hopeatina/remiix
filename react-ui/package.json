@@ -14,7 +14,7 @@
   "devDependencies": {
     "react-scripts": "^1.0.7"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "https://remiix.herokuapp.com",
   "scripts": {
     "start": "react-scripts start ",
     "build": "react-scripts build",
