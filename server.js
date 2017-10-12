@@ -32,10 +32,11 @@ mongoose.connect(MONGO_URI, options, function (error) {
 // });
 
 // Priority serve any static files.
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("react-ui/build"));
-}
-// app.use(express.static(path.resolve(__dirname, './react-ui/build')));
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static("react-ui/build"));
+// }
+
+app.use(express.static(path.resolve(__dirname, './react-ui/build')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 

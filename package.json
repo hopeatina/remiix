@@ -7,11 +7,11 @@
     "node": "6.9.x"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
+    "start": "node server.js",
     "client": "node start-client.js",
+    "install": "cd react-ui && npm install && npm run build && cd ..",
     "start-dev": "nf start -p 5000",
-    "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd react-ui/ && npm install && npm run build && cd .."
   },
   "cacheDirectories": [
     "node_modules",
