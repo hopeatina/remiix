@@ -6,6 +6,9 @@ var Post = require('./Model/Post.js');
 var Song = require('./Model/Song.js');
 var Concept = require('./Model/Concept.js');
 var Scene = require('./Model/Scene.js');
+var AWS = require('aws-sdk');
+var s3Bucket = new AWS.S3( { params: {Bucket: 'remiix-assets'} } );
+
 const router = express.Router();
 
 // Posts --> WRDZ
@@ -98,6 +101,16 @@ router.post('/scene', function (req, res) {
 //adding the /posts route to our /api router
 router.get('/song', function (req, res) {
     // looks at our Post Schema
+    s3Bucket.listObjects(params, function(err, data){
+        var bucketContents = data.Contents;
+        console.log("We're in the s3buckket");
+        for (var i = 0; i < bucketContents.length; i++){
+            var urlParams = {Bucket: 'myBucket', Key: bucketContents[i].Key};
+            s3.getSignedUrl('getObject',urlParams, function(err, url){
+                console.log('the url of the image is', url);
+            });
+        }
+    });
     Song.find(function(err, posts) {
         if (err) {
             res.json(err)

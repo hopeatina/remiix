@@ -22,7 +22,7 @@ class Concepts extends Component {
             <div className="Concepts">
                 <Overlay/>
                 <div className="Pagetitle">CONCEPTS</div>
-                <div className="Page-div">
+                <div className="Page-div-concepts">
                     <div className="Concepts-view">
                         <div className="Concepts-back">
                             <img alt="a thing" src={arrow}></img>

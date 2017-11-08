@@ -7,6 +7,9 @@ import '../App.css';
 import leftarrow from '../Home/leftarrow.png'
 import Overlay from '../Overlay.js';
 import { Unity } from 'react-unity-webgl';
+import 'aframe';
+// import 'aframe-particle-system-component';
+import {Entity, Scene} from 'aframe-react';
 
 
 
@@ -21,6 +24,26 @@ class Reality extends Component {
     componentDidMount() {
         this.setState({
             Unity: <div id="gameContainerId" ></div>
+        })
+    }
+
+    onArrowClick(direction){
+        if(direction == "left") {
+
+        } else if (direction =="right") {
+
+        }
+    }
+
+    onThumbnailClick(vrid) {
+        this.setState({
+        Unity:       <Scene>
+            <Entity geometry={{primitive: 'box'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}}/>
+            <Entity particle-system={{preset: 'snow'}}/>
+            <Entity light={{type: 'point'}}/>
+            <Entity gltf-model={{src: 'virtualcity.gltf'}}/>
+            <Entity text={{value: 'Hello, WebVR!'}}/>
+        </Scene>
         })
     }
 
@@ -40,10 +63,10 @@ class Reality extends Component {
                         <div className="Reality-arrow-left">
                             <img className="Reality-arrow-size" alt="" src={leftarrow}></img>
                         </div>
-                            <div className="Reality-viewitem"></div>
-                            <div className="Reality-viewitem"></div>
-                            <div className="Reality-viewitem"></div>
-                            <div className="Reality-viewitem"></div>
+                            <div onClick={ () => this.onThumbnailClick(1)} className="Reality-viewitem"></div>
+                            <div onClick={ () => this.onThumbnailClick(1)} className="Reality-viewitem"></div>
+                            <div onClick={ () => this.onThumbnailClick(1)} className="Reality-viewitem"></div>
+                            <div onClick={ () => this.onThumbnailClick(1)} className="Reality-viewitem"></div>
                         <div className="Reality-arrow-right">
                             <img className="Reality-arrow-size"  alt="" src={leftarrow}></img>
                         </div>

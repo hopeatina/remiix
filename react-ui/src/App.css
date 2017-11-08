@@ -1,16 +1,55 @@
+@media (min-width: 300px) {
+    .Reality-view {
+        width: 80%;
+        margin-left: 10%;
+        position: absolute;
+        max-height: 90%;
+        min-height: 64%;
+        /*width: 64%;*/
+        background: white;
+        /*margin-left: calc(130px + 10%);*/
+        /*margin-left:18%;*/
+        margin-top: 55px;
+        background: rgba(251, 252, 229, 0.85);
+        border: 10px solid #D0D54E;
+        border-radius: 20px;
+    }
 
+    .Reality-arrow-left {
+        position: absolute;
+        left: -10%;
+        top: 5%;
+        margin-left: -57px;
+        transition: .3s ease;
+        z-index: 11;
+        /*box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);*/
+    }
+
+    .Reality-arrow-right {
+        position: absolute;
+        right: -10%;
+        top: 5%;
+        z-index: 11;
+        margin-right: -57px;
+        -moz-transform: scaleX(-1);
+        transition: .3s ease;
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+}
 .App {
     text-align: center;
-    background-size: contain;
+    /*background-size: contain;*/
     width: 100%;
     height: inherit;
     /* Rectangle 5 */
-    background: linear-gradient(180deg, #2f2f2f 0%, #1A1A1A 100%);
+    /*background: linear-gradient(180deg, #2f2f2f 0%, #1A1A1A 100%);*/
     opacity: 1.00;
     font-family: 'Share Tech Mono', monospace;
 }
 
-html, #root, .App {
+html, #root,.App {
     display: inline;
     min-height: 100%;
     width: 100%;
@@ -86,7 +125,7 @@ html, #root, .App {
 .home-svgdiv {
     top: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     height: 100%;
     overflow: hidden;
     z-index: 0;
@@ -100,6 +139,7 @@ html, #root, .App {
     overflow: hidden;
     position: relative;
     margin-top: 218px;
+    margin-bottom: 10%;
     text-align: center;
 }
 
@@ -157,7 +197,8 @@ html, #root, .App {
     font-size: 20px;
     z-index: 12;
     bottom: 20px;
-    position: absolute;
+    position: relative;
+    margin-top: 5%;
     width: 100%;
     text-align: center;
 }
@@ -294,6 +335,7 @@ html, #root, .App {
 }
 
 .Pagetitle {
+    z-index: 11;
     position: relative;
     top: 70px;
     text-align: right;
@@ -333,16 +375,7 @@ html, #root, .App {
 }
 
 .Reality-view {
-    position: absolute;
-    max-height: 90%;
-    min-height: 64%;
-    width: 64%;
-    background: white;
-    margin-left: calc(130px + 10%);
-    margin-top: 55px;
-    background: rgba(251, 252, 229, 0.85);
-    border: 10px solid #D0D54E;
-    border-radius: 20px;
+
 }
 
 #gameContainerId {
@@ -355,8 +388,8 @@ html, #root, .App {
 }
 
 #gameContainerId canvas {
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
     border-radius: 10px;
     margin: auto;
     width: 100%;
@@ -391,37 +424,21 @@ html, #root, .App {
 }
 
 .Reality-carousel-div {
-    width: 100%;
+    width: 80%;
     height: 24%;
+    margin-left: 10%;
     /* background: white; */
     border-radius: 10px;
     border: 1px #d0d54e solid;
     position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
     top: 111%;
     left: -10px;
     background: rgba(251, 252, 229, 0.95);
 }
 
-.Reality-arrow-left {
-    position: absolute;
-    left: -108px;
-    top: -5%;
-    transition: .3s ease;
-    /*box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);*/
-}
 
-.Reality-arrow-right {
-    position: absolute;
-    right: -108px;
-    top: -5%;
-    -moz-transform: scaleX(-1);
-    transition: .3s ease;
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
 
 .Reality-arrow-right:hover {
     transform: translateY(-10px) scaleX(-1);
@@ -444,9 +461,11 @@ html, #root, .App {
 
 .Reality-arrow-size {
     margin: auto;
-    height: 121px;
+    /*height: 121px;*/
+    width: 75%;
     display: block;
 }
+
 .Wrdz-artcontent {
     margin: 20px;
     text-align: left;
@@ -464,9 +483,9 @@ html, #root, .App {
     background: white;
     border-radius: 10px;
     min-height: 80%;
-    width: 60%;
+    width: 65%;
     position: absolute;
-    margin-left: 13%;
+    margin-left: 17.5%;
     margin-top: 75px;
 }
 
@@ -492,14 +511,14 @@ html, #root, .App {
 
 .Wrdz-next:hover {
     transform: translateY(-10px) scaleX(-1);
-    -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
-    filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.5));
 }
 
 .Wrdz-back:hover {
     transform: translateY(-10px);
-    -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
-    filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.5));
 }
 
 .arrow-text {
@@ -509,9 +528,20 @@ html, #root, .App {
 }
 
 .Page-div {
-    margin-left: 130px;
+    /*margin-left: 130px;*/
     min-height: 100%;
     width: calc(100% - 130px);
+}
+.Page-div-concepts {
+    margin-left: 10%;
+    min-height: 100%;
+    width: 80%;
+}
+.Page-div-tunez {
+    margin-left: 5%;
+    min-height: 100%;
+    width: 90%;
+    padding-top: 5%;
 }
 
 .Concepts-view {
@@ -573,23 +603,21 @@ html, #root, .App {
 
 .Concepts-next:hover {
     transform: translateY(-10px) scaleX(-1);
-    -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
-    filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.5));
 }
 
 .Concepts-back:hover {
     transform: translateY(-10px);
-    -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
-    filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.5));
 }
-
 
 .Tunez-list {
     height: 80%;
     width: 40%;
     position: absolute;
     padding-left: 5%;
-    padding-top: 5%;
 }
 
 .Tunez-category {
@@ -668,7 +696,7 @@ html, #root, .App {
 }
 
 .Tunez-songwave {
-    margin-top: 15%;
+    margin-top: 5%;
     /* margin-right: -6%; */
     margin-left: 15%;
     /* text-align: center; */

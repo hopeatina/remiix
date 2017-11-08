@@ -8,10 +8,16 @@ import reality from './reality.png'
 import concepts from './concepts.png'
 import tunez from './tunez.png'
 import wrdz from './wrdz.png'
+import homesvg from './home-back.svg'
 import {Link, Route,} from 'react-router-dom'
 
 
 class Home extends Component {
+
+    constructor() {
+        super();
+        this.scrollheight = { height: document.body.scrollHeight};
+    }
 
     render() {
         let Subtext = null;
@@ -19,12 +25,12 @@ class Home extends Component {
             Get dope weekly updates
         </div>;
 
-        const About = <div className="home-aboutcard">About
+        const About = <div><div className="home-aboutcard">About
             <div className="home-aboutgrad"></div>
-        </div>;
-        const Contact = <div className="home-aboutcard">Contact
+        </div> </div>;
+        const Contact = <div> <div className="home-aboutcard">Contact
             <div className="home-aboutgrad"></div>
-        </div>;
+        </div></div>;
         const Home = <div>
             <div className="home-subscribe-text">
                 <div id="revue-embed">
@@ -68,6 +74,7 @@ class Home extends Component {
         </div>;
 
         const homesvg = <div className="home-svgdiv">
+            {/*<object type="image/svg+xml" data={homesvg}>Your browser does not support SVGs</object>*/}
             <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1659 1365"
                  version="1.1">
                 <title>Canvas.svg</title>

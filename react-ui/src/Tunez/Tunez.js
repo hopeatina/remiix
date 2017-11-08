@@ -59,7 +59,7 @@ class Tunez extends Component {
             <div className="Tunez">
                 <Overlay/>
                 <div className="Pagetitle">TUNEZ</div>
-                <div className="Page-div">
+                <div className="Page-div-tunez">
                     <div className="Tunez-list">
                         <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">Songs</div>
                         <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
