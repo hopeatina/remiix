@@ -197,7 +197,7 @@ class Home extends Component {
                 </defs>
             </svg>
         </div>;
-        const nav =                 <div className="home-nav"><Link to={'/'}> Home</Link> | <Link to={'/about'}> About</Link> | <Link
+        const nav =                 <div className="home-nav-h"><Link to={'/'}> Home</Link> | <Link to={'/about'}> About</Link> | <Link
             to={'/contact'}> Contact</Link></div>;
 
         return (

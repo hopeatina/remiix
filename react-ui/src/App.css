@@ -81,8 +81,8 @@ html, #root,.App {
 }
 
 .home-logo {
-    height: 75px;
-    width: auto;
+    max-height: 75px;
+    max-width: 90%;
     margin: auto;
     z-index: 12;
 }
@@ -192,7 +192,7 @@ html, #root,.App {
     max-width: 90%;
 }
 
-.home-nav {
+.home-nav-h {
     color: white;
     font-size: 20px;
     z-index: 12;
@@ -202,6 +202,20 @@ html, #root,.App {
     width: 100%;
     text-align: center;
 }
+
+
+.home-nav-ac {
+    color: white;
+    font-size: 20px;
+    z-index: 12;
+    bottom: 20px;
+    position: relative;
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+
 
 .home-aboutcard {
     width: 60%;
