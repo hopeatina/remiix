@@ -61,12 +61,14 @@ class Tunez extends Component {
                 <div className="Pagetitle">TUNEZ</div>
                 <div className="Page-div-tunez">
                     <div className="Tunez-list">
-                        <div onClick={() => this.switchSelection("New Title")} className="Tunez-category">Songs</div>
-                        <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
-                        <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
-                        <SongItem attr={this.state.other} onClick={() => this.switchSelection(this.state.defaultsong)}/>
-                        <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
-                        <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
+                        <div className="Tunez-category">Songs</div>
+                        <div className="Tunez-song-container">
+                            <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
+                            <SongItem attr={this.state.defaultsong} onClick={() => this.switchSelection(this.state.defaultsong)}/>
+                            <SongItem attr={this.state.other} onClick={() => this.switchSelection(this.state.secondsong)}/>
+                            <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
+                            <SongItem attr={this.state.secondsong} onClick={() => this.switchSelection(this.state.secondsong)}/>
+                        </div>
                     </div>
                     <div className="Tunez-playing">
                         <div className="Tunez-songwave">

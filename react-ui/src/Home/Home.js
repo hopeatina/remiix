@@ -6,6 +6,7 @@ import '../App.css';
 import logo from './remiixlogo.png';
 import reality from './reality.png'
 import concepts from './concepts.png'
+import favicolor from './favicolor.png';
 import tunez from './tunez.png'
 import wrdz from './wrdz.png'
 import homesvg from './home-back.svg'
@@ -16,7 +17,7 @@ class Home extends Component {
 
     constructor() {
         super();
-        this.scrollheight = { height: document.body.scrollHeight};
+        this.scrollheight = {height: document.body.scrollHeight};
     }
 
     render() {
@@ -25,51 +26,81 @@ class Home extends Component {
             Get dope weekly updates
         </div>;
 
-        const About = <div><div className="home-aboutcard">About
-            <div className="home-aboutgrad"></div>
-        </div> </div>;
-        const Contact = <div> <div className="home-aboutcard">Contact
-            <div className="home-aboutgrad"></div>
-        </div></div>;
+        const nav = <div className="home-nav-h"><Link to={'/'}> Home</Link> | <Link to={'/about'}> About</Link> | <Link
+            to={'/contact'}>Contact</Link></div>;
+        const navac = <div className="home-nav-ac"><Link to={'/'}> Home</Link> | <Link to={'/about'}> About</Link> |
+            <Link
+                to={'/contact'}>Contact</Link></div>;
+
+
+        const About = <div>
+            <div className="home-aboutcard"><div className="home-card-title">About</div>
+                <div className="home-aboutgrad">
+                </div>
+                <div className="home-about-logo">
+                    <img  height="100%" src={favicolor}></img>
+                </div>
+                <div className="home-about-text">
+                    Hello! This is remiix.life. Few valuable things in life are straightforward. This site is made by
+                    Hope Atina, ME!, to document the exploration
+                    of the intersections of our advancing shared human experience through graphics, concepts, words, and
+                    sounds. Lol that's jargon for a dope/different project site.
+                    Make sure you <a target="blank" href="https://www.getrevue.co/profile/hope/add_subscriber">subscribe</a> to the weekly update newsletter, to follow the journey!
+                </div>
+            </div>
+            {navac} </div>;
+        const Contact = <div>
+            <div className="home-aboutcard"><div className="home-card-title">Contact</div>
+                <div className="home-aboutgrad"></div>
+                <div className="home-about-logo">
+                    <img  height="100%" src={favicolor}></img>
+                </div>
+                <div className="home-about-text">
+                    You can contact me on:
+                    <div> Twitter: <a href="https://twitter.com/The_OnlyHope">@The_OnlyHope</a></div>
+                    <div> Medium: <a href="https://medium.com/@The_OnlyHope">@The_OnlyHope</a></div>
+                    <div> Email: [firstname][lastname]@gmail.com</div>
+                </div>
+            </div>
+            {navac} </div>;
         const Home = <div>
             <div className="home-subscribe-text">
                 <div id="revue-embed">
-                    <form action="https://www.getrevue.co/profile/hope/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+                    <form action="https://www.getrevue.co/profile/hope/add_subscriber" method="post" id="revue-form"
+                          name="revue-form" target="_blank">
                         <div className="revue-form-group">
-                            <input className="home-subscribe-input" placeholder="Your Email Address..." type="email" name="member[email]" id="member_email"></input>
-                            <input className="home-submit" type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"></input>
+                            <input className="home-subscribe-input" placeholder="Your Email Address..." type="email"
+                                   name="member[email]" id="member_email"></input>
+                            <input className="home-submit" type="submit" value="Subscribe" name="member[subscribe]"
+                                   id="member_submit"></input>
                         </div>
-                        {/*<div class=" revue-form-group">*/}
-                            {/*<label for="member_first_name">First name <span class="optional">(Optional)</span></label>*/}
-                            {/*<input class="revue-form-field" placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name">*/}
-                        {/*</div>*/}
-                        {/*<div class="revue-form-group">*/}
-                            {/*<label for="member_last_name">Last name <span class="optional">(Optional)</span></label>*/}
-                            {/*<input class="revue-form-field" placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name">*/}
-                        {/*</div>*/}
-
                     </form>
                 </div>
             </div>
             <div className="home-options">
 
                 <Link to="/reality">
-                    <div className="option-1"><img alt="athing"  src={reality} className="home-img" height="200"></img></div>
+                    <div className="option-1"><img alt="athing" src={reality} className="home-img" height="200"></img>
+                    </div>
                 </Link>
                 <Link to="/wrdz">
-                    <div className="option-2"><img alt="athing"  src={wrdz} className="home-img" height="200"></img></div>
+                    <div className="option-2"><img alt="athing" src={wrdz} className="home-img" height="200"></img>
+                    </div>
                 </Link>
                 <Link to="/concepts">
-                    <div className="option-3"><img alt="athing"  src={concepts} className="home-img" height="200"></img></div>
+                    <div className="option-3"><img alt="athing" src={concepts} className="home-img" height="200"></img>
+                    </div>
                 </Link>
                 <Link to="/tunez">
-                    <div className="option-4"><img alt="athing"  src={tunez} className="home-img" height="200"></img></div>
+                    <div className="option-4"><img alt="athing" src={tunez} className="home-img" height="200"></img>
+                    </div>
                 </Link>
 
             </div>
+            {nav}
         </div>;
 
-        const homelogo =                 <div className="home-logodiv">
+        const homelogo = <div className="home-logodiv">
             <img alt="logodiv" src={logo} className="home-logo" height={'auto'} width={'auto'}></img>
         </div>;
 
@@ -197,8 +228,6 @@ class Home extends Component {
                 </defs>
             </svg>
         </div>;
-        const nav =                 <div className="home-nav-h"><Link to={'/'}> Home</Link> | <Link to={'/about'}> About</Link> | <Link
-            to={'/contact'}> Contact</Link></div>;
 
         return (
             <div className="App">
@@ -208,7 +237,7 @@ class Home extends Component {
                 <Route path="/about" component={() => About}/>
                 <Route path="/contact" component={() => Contact}/>
                 {homesvg}
-                {nav}
+
             </div>
         );
     }
