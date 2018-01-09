@@ -38,7 +38,7 @@ class Wrdz extends Component {
                 <div className="Page-div">
                     <div className="Wrdz-view">
                         <div className="Wrdz-back">
-                            <img alt="a thing" src={arrow}></img>
+                            <img className="Wrdz-next-size" alt="a thing" src={arrow}></img>
                             <div>Previous</div>
                         </div>
 
@@ -47,7 +47,7 @@ class Wrdz extends Component {
                             This is the beginning.
                         </div>
                         <div className="Wrdz-next">
-                            <img alt="a thing" src={arrow}></img>
+                            <img className="Wrdz-next-size" alt="a thing" src={arrow}></img>
                             <div className="arrow-text">Next</div>
                         </div>
                     </div>
