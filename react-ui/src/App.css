@@ -1,3 +1,40 @@
+
+@media (max-width: 1600px) {
+
+    .Concepts-back {
+        position: relative;
+        left: -120px;
+        top: 33%;
+        width: 112px;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .Concepts-next {
+        position: relative;
+        right: -120px;
+        float: right;
+        width: 112px;
+        top: 21px;
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .Concepts-view {
+        height: 400px;
+        width: 400px;
+        background: rgba(0, 0, 0, 0.47);
+        border-radius: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        border: white 10px solid;
+    }
+}
+
 @media (max-width: 600px) {
     .Wrdz-back {
         position: absolute;
@@ -18,7 +55,42 @@
         transform: scaleX(-1);
         transition: .3s ease;
     }
+
+    .Concepts-back {
+        position: relative;
+        left: -106px;
+        top: 33%;
+        width: 112px;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .Concepts-next {
+        position: relative;
+        right: -106px;
+        float: right;
+        width: 112px;
+        top: -46px;
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .Concepts-view {
+        height: 200px;
+        width: 200px;
+        background: rgba(0, 0, 0, 0.47);
+        border-radius: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        border: white 10px solid;
+    }
+
 }
+
 @media (min-width: 300px) {
     .Reality-view {
         width: 80%;
@@ -94,7 +166,10 @@
         transition: .3s ease;
     }
 
+
 }
+
+
 
 
 .App {
@@ -575,8 +650,9 @@ html, #root,.App {
     min-height: 80%;
     width: 65%;
     position: absolute;
-    margin-left: 17.5%;
+    margin-left: 6.5%;
     margin-top: 75px;
+    margin-bottom: 10%;
 }
 
 .Wrdz-next-size {
@@ -621,23 +697,14 @@ html, #root,.App {
     margin-bottom: 5%;
 }
 
-.Concepts-view {
-    height: 400px;
-    width: 400px;
-    background: rgba(0, 0, 0, 0.47);
-    border-radius: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    border: white 10px solid;
-}
 
 .Concepts-title {
     position: relative;
     top: 5px;
     display: inline-block;
-    height: 170px;
     width: 370px;
+    min-height: 170px;
+    max-width: 90%;
     margin-left: auto;
     background: rgba(255, 255, 255, 0.96);
     border-radius: 10px;
@@ -651,6 +718,8 @@ html, #root,.App {
     top: 5px;
     height: 170px;
     width: 370px;
+    min-height: 170px;
+    max-width: 90%;
     background: rgba(255, 255, 255, 0.96);
     border-radius: 10px;
     display: inline-block;
@@ -659,27 +728,7 @@ html, #root,.App {
 
 }
 
-.Concepts-back {
-    position: relative;
-    left: -130px;
-    top: 30%;
-    width: 112px;
-    transition: .3s ease;
-    cursor: pointer;
-}
 
-.Concepts-next {
-    position: relative;
-    right: -130px;
-    float: right;
-    width: 112px;
-    top: -53px;
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    transform: scaleX(-1);
-    transition: .3s ease;
-    cursor: pointer;
-}
 
 .Concepts-next:hover {
     transform: translateY(-10px) scaleX(-1);
@@ -776,7 +825,7 @@ html, #root,.App {
 }
 
 .Tunez-playing {
-    min-width: 552px;
+    min-width: 392px;
     height: 80%;
     margin: auto;
     /* position: absolute; */
@@ -801,15 +850,14 @@ html, #root,.App {
 }
 
 .Tunez-ctrlback {
-    width: 114px;
-    height: 114px;
+    width: 90px;
+    height: 90px;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
     background: #FFFFFF;
     border: 10px solid #4E1584;
     display: inline-block;
-    margin-left: 10%;
     float: left;
     box-shadow: #43186b 0px 10px 0px 0px;
     transition: .2s linear;
@@ -817,9 +865,9 @@ html, #root,.App {
 }
 
 .Tunez-ctrlnext {
-    width: 114px;
+    width: 90px;
+    height: 90px;
     display: inline-flex;
-    height: 114px;
     float: left;
     background: #FFFFFF;
     border: 10px solid #4E1584;

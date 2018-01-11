@@ -25,11 +25,11 @@ class Concepts extends Component {
                 <div className="Page-div-concepts">
                     <div className="Concepts-view">
                         <div className="Concepts-back">
-                            <img alt="a thing" src={arrow}></img>
+                            <img className="Wrdz-next-size" alt="a thing" src={arrow}></img>
                             <div >Previous</div>
                         </div>
                         <div className="Concepts-next">
-                            <img alt="a thing" src={arrow}></img>
+                            <img className="Wrdz-next-size" alt="a thing" src={arrow}></img>
                             <div className="arrow-text">Next</div>
                         </div>
                     </div>
