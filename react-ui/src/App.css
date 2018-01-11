@@ -156,7 +156,7 @@
 
     .Wrdz-next {
         position: absolute;
-        right: -120px;
+        right: -97px;
         top: 30%;
         cursor: pointer;
         -moz-transform: scaleX(-1);
@@ -648,7 +648,7 @@ html, #root,.App {
     background: white;
     border-radius: 10px;
     min-height: 80%;
-    width: 65%;
+    width: 76%;
     position: absolute;
     margin-left: 6.5%;
     margin-top: 75px;
