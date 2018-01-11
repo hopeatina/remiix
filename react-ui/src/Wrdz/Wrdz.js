@@ -37,10 +37,10 @@ class Wrdz extends Component {
                 <div className="Pagetitle">WRDZ</div>
                 <div className="Page-div">
                     <div className="Wrdz-view">
-                        <div className="Wrdz-back">
-                            <img className="Wrdz-next-size" alt="a thing" src={arrow}></img>
-                            <div>Previous</div>
-                        </div>
+                        {/*<div className="Wrdz-back">*/}
+                            {/*<img className="Wrdz-next-size" alt="a thing" src={arrow}></img>*/}
+                            {/*<div>Previous</div>*/}
+                        {/*</div>*/}
 
                         <div className="Wrdz-title">Introducing Remiix.life</div>
                         <div className="Wrdz-artcontent">
